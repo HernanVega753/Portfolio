@@ -469,7 +469,7 @@ html{
     border-left: 2px solid #1cb698;
     margin-left: 20px;
 }
-/*  REVISAR ESTA PARTE, NO SE MANIFIESTA EN LA PÁGINA
+/* Probando esta parte, porque no estaría funcionando 
 .curriculum .fila .conectori{
     position: absolute;
     height: 2px;
@@ -479,7 +479,7 @@ html{
     right: -47px;
     z-index: 5;
 }
-.curriculum .fila .conectori circuloi{
+.curriculum .fila .conectori .circuloi{
     display: block;
     height: 10px;
     width: 10px;
@@ -488,7 +488,7 @@ html{
     position: relative;
     bottom: 4px;
 }
-.curriculum .fila .conectori{
+.curriculum .fila .conectord{
     position: absolute;
     height: 2px;
     background-color: #1cb698;
@@ -497,7 +497,7 @@ html{
     left: -47px;
     z-index: 5;
 }
-.curriculum .fila .conectori circuloi{
+.curriculum .fila .conectori circulod{
     display: block;
     height: 10px;
     width: 10px;

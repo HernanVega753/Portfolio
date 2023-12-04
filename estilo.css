@@ -674,6 +674,9 @@ footer .redes a{
     font-size: 20px;
     transition: .3s;
 }
+footer .redes a:hover{
+    background-color: #1cb698;
+}
 footer .arriba{
     display: block;
     width: 50px;
@@ -690,14 +693,14 @@ footer .arriba{
 }
 
 /* SECCION RESPONSIVE */
-@media screen and (max-width=980px){
+@media screen and (max-width:980px){
     nav{
         display: none;
     }
     .nav-responsive{
         display: block;
     }
-    nav .responsive{
+    nav.responsive{
         display: block;
         position: absolute;
         right: 0;
@@ -705,10 +708,10 @@ footer .arriba{
         background-color: #252A2E;
         width: 180px;
     }
-    nav .responsive ul{
-        display: block !important;
+    nav.responsive ul{
+        display: block;
     }
-    nav .responsive ul li{
+    nav.responsive ul li{
         border-bottom: 1px solid #fff;
         padding: 10px 0;
     }
@@ -748,8 +751,10 @@ footer .arriba{
     .portfolio .galeria .proyecto img{
         width: 100%;
     }
+    .contacto .fila{
+        display: block;
+    }
     .contacto .fila .col{
         width: 100%;
-        
     }
 }

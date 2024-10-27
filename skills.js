@@ -1,72 +1,63 @@
-const ctx = document.getElementById('myChart').getContext('2d');
-
-// Datos del gráfico
-const labels = [
-    'Python',
-    'Java',
-    'JavaScript',
-    'GdScript',
-    'Git',
-    'Docker',
-    'MySQL',
-    'PostgreSQL',
-    'MongoDB',
-    'HTML',
-    'CSS',
-    'PHP'
-];
-
-// Aquí puedes definir el número de "porciones" para cada lenguaje. Por ejemplo, si consideras que todos tienen el mismo peso:
-const data = Array(labels.length).fill(1); // Cada lenguaje tiene el mismo peso
-
-const myChart = new Chart(ctx, {
-    type: 'pie', // Tipo de gráfico
-    data: {
-        labels: labels,
-        datasets: [{
-            label: 'Habilidades',
-            data: data,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-            ],
-            borderWidth: 1
-        }]
+// Datos de aprendizaje para cada lenguaje
+const data = {
+    Python: {
+        aprendido: 80,
+        noAprendido: 20 // 100 - 80
     },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Gráfico de Habilidades'
+    Java: {
+        aprendido: 60,
+        noAprendido: 40 // 100 - 60
+    },
+    JavaScript: {
+        aprendido: 70,
+        noAprendido: 30 // 100 - 70
+    }
+};
+
+// Función para crear el gráfico de torta
+function createPieChart(ctx, labels, dataValues) {
+    return new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: dataValues,
+                backgroundColor: [
+                    'rgba(52, 152, 219, 0.6)', // Color para Aprendido
+                    'rgba(231, 76, 60, 0.6)'   // Color para No Aprendido
+                ],
+                borderColor: [
+                    'rgba(52, 152, 219, 1)',
+                    'rgba(231, 76, 60, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: `Porcentaje de Aprendizaje`
+                }
             }
         }
-    }
-});
+    });
+}
+
+// Crear los gráficos para cada lenguaje
+createPieChart(document.getElementById('pythonChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.Python.aprendido, data.Python.noAprendido]);
+createPieChart(document.getElementById('javaChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.Java.aprendido, data.Java.noAprendido]);
+createPieChart(document.getElementById('jsChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);
+createPieChart(document.getElementById('htmlChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);
+createPieChart(document.getElementById('cssChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);
+createPieChart(document.getElementById('phpChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);
+createPieChart(document.getElementById('mongoChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);
+createPieChart(document.getElementById('mysqlChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);
+createPieChart(document.getElementById('psqlChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);
+createPieChart(document.getElementById('godotChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);
+createPieChart(document.getElementById('dockerChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);
+createPieChart(document.getElementById('gitChart').getContext('2d'), ['Aprendido', 'No Aprendido'], [data.JavaScript.aprendido, data.JavaScript.noAprendido]);

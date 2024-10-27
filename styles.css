@@ -1,18 +1,31 @@
+@charset "UTF-8";
+.styled-divider {
+  height: 2px; /* Altura de la línea */
+  width: 70%;
+  background-color: #000; /* Color de la línea */
+  border-bottom: 1px dashed #ccc; /* Borde inferior, estilo punteado */
+  margin: 20px; /* Espaciado arriba y abajo */
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Courier New", Courier, monospace;
   background-color: #4A4A4A;
   color: rgba(224, 224, 224, 0.9215686275);
-  font-family: Poppins, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 body H1 {
-  font-size: 500%;
+  font-size: 300%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 body H2 {
-  font-size: 300%;
+  margin: 0;
+  font-size: 200%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 body .aside {
+  font-family: "Nunito", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: block;
   margin-left: 0;
   justify-content: center;
@@ -42,18 +55,47 @@ body header {
   align-items: center;
   text-align: center;
 }
+body header .img-hernan-container {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin-top: 40px;
+  border-style: outset;
+  border-radius: 50%;
+  border-color: #0a042d;
+  justify-content: center;
+}
+body header .img-hernan-container .img-hernan {
+  position: relative;
+  width: 200px;
+  top: -30px;
+}
+body header .img-container {
+  border-bottom: #0a042d;
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+  border-top: #0a042d;
+  border-style: outset;
+}
+body header .img-container .port-img {
+  position: relative;
+  top: -150px;
+  width: 100%; /* Ancho fijo de la imagen */
+  height: auto; /* Mantiene la proporción */
+}
+body header .contacto {
+  margin: 20px;
+}
 body header .contacto a {
-  background-color: whitesmoke;
+  background-color: none;
   padding: 2px;
   border-radius: 2%;
+  font-size: 150%;
+  font-weight: bold;
+  color: #0a042d;
+  text-shadow: 2px 2px 4px white;
 }
-body header .contacto .email {
-  background-color: rgba(255, 255, 255, 0.667);
-}
-body header .contacto .linkedin {
-  background-color: rgba(89, 60, 255, 0.833);
-}
-
 @media (max-width: 768px) {
   body header {
     padding-left: 0;

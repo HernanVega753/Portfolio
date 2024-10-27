@@ -1,0 +1,135 @@
+$primary_color: #0a042d;
+$secundary_color: #6400f9;
+$acent_color: #f75f35;
+$text_color: #e0e0e0eb;
+$text_color_2: #00f746;
+$background_color: #4A4A4A;
+
+.styled-divider {
+    height: 2px; /* Altura de la línea */
+    width: 70%;
+    background-color: #000; /* Color de la línea */
+    border-bottom: 1px dashed #ccc; /* Borde inferior, estilo punteado */
+    margin: 20px; /* Espaciado arriba y abajo */
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+    background-color: $background_color;
+    color: $text_color;
+    font-family:'Courier New', Courier, monospace;
+    H1{
+        font-size: 300%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        
+    }
+    H2{
+        margin: 0;
+        font-size: 200%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    
+    .aside {
+        font-family: "Nunito", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: block;
+        margin-left: 0;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        position: fixed;
+        width: 150px;
+        font-size: 20px;
+        ul {
+            
+            margin: auto;
+            padding: 10px;
+            background-color: $primary_color;
+            width: auto;
+            height: 100%;
+            list-style: none;
+            justify-content: center;
+            li {
+                padding: 15px;
+            }
+        }
+    
+    }
+    header {
+        padding-left: 150px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .img-hernan-container {
+            
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            margin-top: 40px;
+            border-style: outset;
+            border-radius: 50%;
+            border-color: $primary_color;
+            justify-content: center;
+            .img-hernan {
+                position: relative;
+                width: 200px;
+                top: -30px;
+                
+            }
+        }
+        .img-container {
+            
+            border-bottom: #0a042d;
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+            border-top:$primary_color;
+            border-style: outset;
+            .port-img {
+                position: relative;
+                top: -150px;
+                width: 100%; /* Ancho fijo de la imagen */
+                height: auto; /* Mantiene la proporción */
+                
+            }
+        }
+        .contacto {
+            margin: 20px;
+            a {
+                background-color: none;
+                padding: 2px;
+                border-radius: 2%;  
+                font-size: 150%;
+                font-weight: bold;
+                color: $primary_color;        
+                text-shadow: 2px 2px 4px white;
+
+            }
+            .email {
+
+            }
+            .linkedin {
+                
+            }
+            .github {
+                
+            }
+        }
+    }
+    
+}
+@media (max-width: 768px) {
+    body header {
+        padding-left: 0;
+    }
+    .aside {
+        visibility: hidden; /* Prueba ocultando visibilidad */
+        opacity: 0;
+    }
+}
+

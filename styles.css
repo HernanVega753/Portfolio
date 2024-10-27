@@ -1,7 +1,15 @@
 @charset "UTF-8";
 .styled-divider {
   height: 2px; /* Altura de la línea */
-  width: 70%;
+  width: 90%;
+  background-color: #000; /* Color de la línea */
+  border-bottom: 1px dashed #ccc; /* Borde inferior, estilo punteado */
+  margin: 20px; /* Espaciado arriba y abajo */
+}
+
+.full-divider {
+  height: 2px; /* Altura de la línea */
+  width: 100%;
   background-color: #000; /* Color de la línea */
   border-bottom: 1px dashed #ccc; /* Borde inferior, estilo punteado */
   margin: 20px; /* Espaciado arriba y abajo */
@@ -13,13 +21,16 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-color: #4A4A4A;
   color: rgba(224, 224, 224, 0.9215686275);
-  font-family: "Courier New", Courier, monospace;
+  overflow-x: hidden;
 }
-body H1 {
+body span {
+  color: #000;
+}
+body h1 {
   font-size: 300%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-body H2 {
+body h2 {
   margin: 0;
   font-size: 200%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -27,20 +38,20 @@ body H2 {
 body .aside {
   font-family: "Nunito", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: block;
-  margin-left: 0;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   position: fixed;
+  left: 0; /* Alinea la barra lateral a la izquierda */
+  top: 0; /* Alinea la barra lateral en la parte superior */
   width: 150px;
+  height: 100%; /* Altura completa */
+  overflow-y: auto; /* Permite desplazamiento vertical si es necesario */
   font-size: 20px;
+  overflow: hidden;
 }
 body .aside ul {
   margin: auto;
   padding: 10px;
-  background-color: #0a042d;
-  width: auto;
   height: 100%;
+  background-color: #0a042d;
   list-style: none;
   justify-content: center;
 }
@@ -48,8 +59,7 @@ body .aside ul li {
   padding: 15px;
 }
 body header {
-  padding-left: 150px;
-  margin: 0;
+  padding-left: 150px; /* Espacio para la barra lateral */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +73,6 @@ body header .img-hernan-container {
   border-style: outset;
   border-radius: 50%;
   border-color: #0a042d;
-  justify-content: center;
 }
 body header .img-hernan-container .img-hernan {
   position: relative;
@@ -79,7 +88,6 @@ body header .img-container {
   border-style: outset;
 }
 body header .img-container .port-img {
-  position: relative;
   top: -150px;
   width: 100%; /* Ancho fijo de la imagen */
   height: auto; /* Mantiene la proporción */
@@ -88,7 +96,6 @@ body header .contacto {
   margin: 20px;
 }
 body header .contacto a {
-  background-color: none;
   padding: 2px;
   border-radius: 2%;
   font-size: 150%;
@@ -96,13 +103,132 @@ body header .contacto a {
   color: #0a042d;
   text-shadow: 2px 2px 4px white;
 }
+body .titulo {
+  width: 89%;
+  display: flex;
+  padding-left: 150px; /* Espacio para la barra lateral */
+}
+body .titulo h2 {
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+}
+body .sobre-mi {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 150px); /* Ajusta el ancho para que no se superponga con la barra lateral */
+  padding-left: 150px; /* Espacio para la barra lateral */
+  height: 500px;
+  color: #4A4A4A;
+  border-radius: 1%;
+}
+body .column {
+  width: 24%;
+  margin: 15px;
+  padding: 15px;
+  border-color: #0a042d;
+  border-style: outset;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  background-color: rgba(224, 224, 224, 0.9215686275);
+  overflow: auto;
+}
+body .container-proyectos {
+  width: calc(60% - 150px); /* Ajusta el ancho para que no se superponga con la barra lateral */
+  display: flex;
+  flex-direction: column;
+  padding-left: 150px; /* Espacio para la barra lateral */
+  margin: 0 auto; /* Centra horizontalmente */
+  text-align: center;
+}
+body .container-proyectos p {
+  text-align: justify;
+  padding: 5px;
+}
+body .container-proyectos img {
+  width: 70%;
+}
+body .educacion {
+  display: flex;
+  flex-direction: column;
+  padding-left: 150px; /* Espacio para la barra lateral */
+  text-align: center;
+  margin: 15px;
+}
+body .container-canvas {
+  width: 100%;
+  display: flex;
+  margin: 20px;
+  margin-bottom: 100px;
+  padding-left: 230px; /* Esto puede ser revisado según tus necesidades */
+  width: 300px;
+  height: 300px;
+}
+body .container-canvas div {
+  text-align: center;
+}
+body .subtitulo {
+  padding-left: 150px; /* Espacio para la barra lateral */
+  text-align: center;
+}
+body footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  margin-left: 150px; /* Espacio para la barra lateral */
+  padding-top: 10px;
+  font-size: smaller;
+  padding-bottom: 10px;
+}
+
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .aside {
+    position: relative; /* Cambiar a posición relativa en pantallas pequeñas */
+    width: 100%; /* Tomar el ancho completo */
+    height: auto; /* Permitir que la altura se ajuste al contenido */
+    visibility: visible; /* Asegurarse de que sea visible */
+    opacity: 1; /* Asegurarse de que sea visible */
+  }
+  body .container-proyectos {
+    padding: 0;
+    width: 100%;
+  }
+  body .container-proyectos .proyectos .img {
+    width: 100%;
+  }
+  body .titulo {
+    padding-left: 0;
+    width: 100%;
+  }
+  body .sobre-mi {
+    padding-left: 0;
+    height: auto;
+    width: 350%; /* Cambiar el ancho a 100% */
+    flex-direction: column;
+    text-align: center;
+  }
   body header {
     padding-left: 0;
   }
   .aside {
     visibility: hidden; /* Prueba ocultando visibilidad */
     opacity: 0;
+  }
+  body .educacion {
+    padding-left: 0;
+  }
+  body .container-canvas {
+    text-align: center;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  body .container-canvas div {
+    margin: 50px;
   }
 }
 

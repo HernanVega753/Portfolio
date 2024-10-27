@@ -4,69 +4,83 @@ $acent_color: #f75f35;
 $text_color: #e0e0e0eb;
 $text_color_2: #00f746;
 $background_color: #4A4A4A;
+$circle-size: 100px;
+$background-color: #4A4A4A;
+$tertiary-color: #e0e0e0;
+$fill-color: #f75f35;
 
 .styled-divider {
     height: 2px; /* Altura de la línea */
-    width: 70%;
+    width: 90%;
     background-color: #000; /* Color de la línea */
     border-bottom: 1px dashed #ccc; /* Borde inferior, estilo punteado */
     margin: 20px; /* Espaciado arriba y abajo */
 }
 
+.full-divider {
+    height: 2px; /* Altura de la línea */
+    width: 100%;
+    background-color: #000; /* Color de la línea */
+    border-bottom: 1px dashed #ccc; /* Borde inferior, estilo punteado */
+    margin: 20px; /* Espaciado arriba y abajo */
+}
 
 body {
     margin: 0;
     padding: 0;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     background-color: $background_color;
     color: $text_color;
-    font-family:'Courier New', Courier, monospace;
-    H1{
+    overflow-x: hidden;
+
+    span {
+        color: #000;
+    }
+    
+    h1 {
         font-size: 300%;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        
     }
-    H2{
+
+    h2 {
         margin: 0;
         font-size: 200%;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-    
-    
+
     .aside {
         font-family: "Nunito", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         display: block;
-        margin-left: 0;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
         position: fixed;
+        left: 0; /* Alinea la barra lateral a la izquierda */
+        top: 0; /* Alinea la barra lateral en la parte superior */
         width: 150px;
+        height: 100%; /* Altura completa */
+        overflow-y: auto; /* Permite desplazamiento vertical si es necesario */
         font-size: 20px;
+        overflow: hidden;
         ul {
-            
             margin: auto;
             padding: 10px;
-            background-color: $primary_color;
-            width: auto;
             height: 100%;
+            background-color: $primary_color;
             list-style: none;
             justify-content: center;
+            
             li {
                 padding: 15px;
             }
         }
-    
     }
+
     header {
-        padding-left: 150px;
-        margin: 0;
+        padding-left: 150px; /* Espacio para la barra lateral */
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+
         .img-hernan-container {
-            
             overflow: hidden;
             width: 200px;
             height: 200px;
@@ -74,62 +88,190 @@ body {
             border-style: outset;
             border-radius: 50%;
             border-color: $primary_color;
-            justify-content: center;
+
             .img-hernan {
                 position: relative;
                 width: 200px;
                 top: -30px;
-                
             }
         }
+
         .img-container {
-            
             border-bottom: #0a042d;
             width: 100%;
             height: 30vh;
             overflow: hidden;
-            border-top:$primary_color;
+            border-top: $primary_color;
             border-style: outset;
+
             .port-img {
-                position: relative;
                 top: -150px;
                 width: 100%; /* Ancho fijo de la imagen */
                 height: auto; /* Mantiene la proporción */
-                
             }
         }
+
         .contacto {
             margin: 20px;
+
             a {
-                background-color: none;
                 padding: 2px;
                 border-radius: 2%;  
                 font-size: 150%;
                 font-weight: bold;
                 color: $primary_color;        
                 text-shadow: 2px 2px 4px white;
-
-            }
-            .email {
-
-            }
-            .linkedin {
-                
-            }
-            .github {
-                
             }
         }
     }
-    
+
+    .titulo {
+        width: 89%;
+        display: flex;
+        padding-left: 150px; /* Espacio para la barra lateral */
+        
+        h2 {
+            width: 100%;
+            background-color: #000;
+            text-align: center;
+        }
+    }
+
+    .sobre-mi {
+        display: flex;
+        flex-direction: row;
+        width: calc(100% - 150px); /* Ajusta el ancho para que no se superponga con la barra lateral */
+        padding-left: 150px; /* Espacio para la barra lateral */
+        height: 500px;
+        color: #4A4A4A;
+        border-radius: 1%;
+    }
+
+    .column {
+        width: 24%;
+        margin: 15px;
+        padding: 15px;
+        border-color: $primary_color;
+        border-style: outset;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        background-color: $text_color;
+        overflow: auto;
+    }
+
+    .container-proyectos {
+        width: calc(60% - 150px); /* Ajusta el ancho para que no se superponga con la barra lateral */
+        display: flex;
+        flex-direction: column;
+        padding-left: 150px; /* Espacio para la barra lateral */
+        margin: 0 auto;  /* Centra horizontalmente */
+        text-align: center;
+
+        p {
+            text-align: justify;
+            padding: 5px;
+        }
+
+        img {
+            width: 70%;
+        }
+    }
+
+    .educacion {
+        display: flex;
+        flex-direction: column;
+        padding-left: 150px; /* Espacio para la barra lateral */
+        text-align: center;
+        margin: 15px;
+    }
+
+    .container-canvas {
+        width: 100%;
+        display: flex;
+        margin: 20px;
+        margin-bottom: 100px;
+        padding-left: 230px; /* Esto puede ser revisado según tus necesidades */
+        width: 300px;
+        height: 300px;
+
+        div {
+            text-align: center;
+        }
+    }
+
+    .subtitulo {
+        padding-left: 150px; /* Espacio para la barra lateral */
+        text-align: center;
+    }
+
+    footer {
+        background-color: #000;
+        color: white;
+        text-align: center;
+        margin-left: 150px; /* Espacio para la barra lateral */
+        padding-top: 10px;
+        font-size: smaller;
+        padding-bottom: 10px;
+    }
 }
+
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .aside {
+        position: relative; /* Cambiar a posición relativa en pantallas pequeñas */
+        width: 100%; /* Tomar el ancho completo */
+        height: auto; /* Permitir que la altura se ajuste al contenido */
+        visibility: visible; /* Asegurarse de que sea visible */
+        opacity: 1; /* Asegurarse de que sea visible */
+    }
+
+    body .container-proyectos {
+        padding: 0;
+        width: 100%;
+
+        .proyectos {
+            .img {
+                width: 100%;
+            }
+        }
+    }
+
+    body .titulo {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    body .sobre-mi {
+        padding-left: 0;
+        height: auto;
+        width: 350%; /* Cambiar el ancho a 100% */
+        flex-direction: column;
+        text-align: center;
+    }
+
     body header {
         padding-left: 0;
     }
+
     .aside {
         visibility: hidden; /* Prueba ocultando visibilidad */
         opacity: 0;
     }
-}
+    body .educacion {
+        padding-left: 0;
+    }
+    body .container-canvas {
+        text-align: center;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        div {
+            margin: 50px
+        }
+    }
 
+}

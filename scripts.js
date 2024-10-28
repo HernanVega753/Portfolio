@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Animación para los enlaces de contacto
-    delay += 500; // Retardo adicional antes de los enlaces
+    delay += 100; // Retardo adicional antes de los enlaces
     contactoLinks.forEach((element, index) => {
         element.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
         element.style.opacity = '0';

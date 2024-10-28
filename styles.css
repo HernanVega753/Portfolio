@@ -172,100 +172,18 @@ body footer {
   font-size: smaller;
   padding-bottom: 10px;
 }
-body .progress-container {
-  padding-top: 60px;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-body .progress-container h3 {
-  color: rgba(224, 224, 224, 0.9215686275);
-  padding-bottom: 20px;
-}
-body .progress-container .progress-bar {
-  padding: 25px;
-  margin-bottom: 20px;
-}
-body .progress-container .progress-bar label {
-  font-size: 18px;
-  color: rgba(224, 224, 224, 0.9215686275);
-}
-body .progress-container .progress-bar .bar {
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  width: 100%;
-  height: 20px;
-  position: relative;
-  margin-top: 5px;
-}
-body .progress-container .progress-bar .progress {
-  height: 100%;
-  border-radius: 5px;
-  background-color: #0a042d;
-  width: 0%; /* Se ajustará dinámicamente con JavaScript */
-  transition: width 2s ease;
-}
-body .progress-container .python {
-  background-color: #4B8BBE;
-}
-body .progress-container .java {
-  background-color: #B07219;
-}
-body .progress-container .javascript {
-  background-color: #F0DB4F;
-}
-body .progress-container .php {
-  background-color: #4F5D95;
-}
-body .progress-container .html {
-  background-color: #E34C26;
-}
-body .progress-container .css {
-  background-color: #264DE4;
-}
-body .progress-container .scss {
-  background-color: #C6538C;
-}
-body .checklist {
-  background-color: #0a042d;
+body .tecnologias {
   display: flex;
   flex-direction: row;
-  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-body .checklist div {
-  margin-left: 10%;
-  padding: 10px;
-  width: 50%;
-}
-body .checklist h3 {
-  text-align: left;
-  color: rgba(224, 224, 224, 0.9215686275);
-}
-body .checklist ul {
-  list-style-type: none;
-  padding: 0;
-}
-body .checklist li {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-body .checklist input[type=checkbox] {
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-  cursor: zoom-in;
-}
-body .checklist label {
-  font-size: 20px;
-  color: rgba(224, 224, 224, 0.9215686275);
-}
-body .checklist input[type=checkbox]:checked + label {
-  color: #00f746;
-}
-body .checklist input[type=checkbox]:checked::before {
-  font-size: 20px;
-  margin-right: 5px;
+body .tecnologias img {
+  width: 5vw;
+  padding: 20px;
+  background-color: #e0e0e0;
+  margin: 2vw;
+  border-radius: 10%;
 }
 body .fullstack {
   width: 100%;
@@ -285,15 +203,16 @@ body .fullstack {
   body h2 {
     font-size: 20px;
   }
-  body .checklist {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
+  body .fullstack {
+    margin-bottom: 30vh;
   }
-  body .checklist div {
-    width: 100;
-    flex-direction: column;
+  body .tecnologias {
+    display: flex;
+    flex-direction: row;
+  }
+  body .tecnologias img {
+    padding: 0.5vw;
+    width: 10vw;
   }
   body .container-proyectos {
     padding: 0;
@@ -327,12 +246,12 @@ body .fullstack {
   body header {
     padding-left: 0;
   }
-  .aside {
-    visibility: hidden; /* Prueba ocultando visibilidad */
-    opacity: 0;
-  }
   body .educacion {
     padding-left: 0;
+  }
+  body footer {
+    font-size: 10px;
+    margin-top: 30px;
   }
 }
 

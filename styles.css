@@ -17,11 +17,8 @@
 }
 
 .full-divider {
-  height: 2px; /* Altura de la línea */
   width: 100%;
-  background-color: #000; /* Color de la línea */
-  border-bottom: 1px dashed #ccc; /* Borde inferior, estilo punteado */
-  margin: 20px; /* Espaciado arriba y abajo */
+  margin: 20vh; /* Espaciado arriba y abajo */
 }
 
 body {
@@ -52,8 +49,10 @@ body header {
 body header .img-hernan-container {
   overflow: hidden;
   width: 200px;
+  margin-top: 2vh;
+  padding: 20px;
+  background-color: #0a042d;
   height: 200px;
-  margin-top: 150px;
   margin-bottom: 20px;
   border-style: outset;
   border-radius: 50%;
@@ -61,8 +60,9 @@ body header .img-hernan-container {
 }
 body header .img-hernan-container .img-hernan {
   position: relative;
-  width: 200px;
-  top: -30px;
+  width: 250px;
+  top: -70px;
+  right: 30px;
 }
 body header .img-container {
   z-index: -1;
@@ -82,7 +82,6 @@ body header .img-container .port-img {
 }
 body header .contacto {
   margin: 20px;
-  padding-bottom: 100px;
 }
 body header .contacto a {
   padding: 4vw;
@@ -205,7 +204,6 @@ body .fullstack {
   width: 100%;
   background-color: #0a042d;
   padding: 5px;
-  margin-bottom: 15vh;
   text-align: center;
   justify-content: center;
 }
@@ -224,7 +222,7 @@ body .fullstack {
     font-size: 20px;
   }
   body .fullstack {
-    margin-bottom: 30vh;
+    margin-bottom: 20vh;
   }
   body .tecnologias {
     display: flex;
@@ -266,12 +264,23 @@ body .fullstack {
   body header {
     padding-left: 0;
   }
+  body header .img-hernan-container {
+    margin-top: 5vh;
+  }
+  body header .img-hernan-container .img-hernan {
+    width: 60vw;
+    right: 30px;
+  }
   body .educacion {
     padding-left: 0;
   }
   body footer {
-    font-size: 10px;
+    font-size: 5px;
     margin-top: 30px;
+  }
+  .full-divider {
+    width: 100%;
+    margin: 10vh; /* Espaciado arriba y abajo */
   }
 }
 

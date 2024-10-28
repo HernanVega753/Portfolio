@@ -32,11 +32,8 @@ $fill-color: #f75f35;
 }
 
 .full-divider {
-    height: 2px; /* Altura de la línea */
     width: 100%;
-    background-color: #000; /* Color de la línea */
-    border-bottom: 1px dashed #ccc; /* Borde inferior, estilo punteado */
-    margin: 20px; /* Espaciado arriba y abajo */
+    margin: 20vh; /* Espaciado arriba y abajo */
 }
 
 body {
@@ -69,8 +66,10 @@ body {
         .img-hernan-container {
             overflow: hidden;
             width: 200px;
+            margin-top: 2vh;
+            padding: 20px;
+            background-color: $primary_color;
             height: 200px;
-            margin-top: 150px;
             margin-bottom: 20px;
             border-style: outset;
             border-radius: 50%;
@@ -79,8 +78,9 @@ body {
 
             .img-hernan {
                 position: relative;
-                width: 200px;
-                top: -30px;
+                width: 250px;
+                top: -70px;
+                right: 30px;
             }
         }
 
@@ -104,7 +104,6 @@ body {
 
         .contacto {
             margin: 20px;
-            padding-bottom: 100px;
             a {
                 padding: 4vw;  
                 font-size: 150%;
@@ -242,7 +241,6 @@ body {
         width: 100%;
         background-color: $primary_color;
         padding: 5px;
-        margin-bottom: 15vh;
         text-align: center;
         justify-content: center;
     }
@@ -263,7 +261,7 @@ body {
             font-size: 20px;
         }
         .fullstack {
-            margin-bottom: 30vh;
+            margin-bottom: 20vh;
         }
     }
     body .tecnologias {
@@ -313,13 +311,24 @@ body {
 
     body header {
         padding-left: 0;
+        .img-hernan-container {
+            margin-top: 5vh;
+            .img-hernan {
+                width: 60vw;
+                right: 30px;
+            }
+        }
     }
 
     body .educacion {
         padding-left: 0;
     }
     body footer {
-        font-size: 10px;
+        font-size: 5px;
         margin-top: 30px;
+    }
+    .full-divider {
+        width: 100%;
+        margin: 10vh; /* Espaciado arriba y abajo */
     }
 }

@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+
+
 $primary_color: #0a042d;
 $secundary_color: #6400f9;
 $acent_color: #f75f35;
@@ -38,17 +42,19 @@ $fill-color: #f75f35;
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Open Sans','Monserrat','sans-serif';
     background-color: $background_color;
     color: $text_color;
     overflow-x: hidden;
     
     h1 {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
         font-size: 300%;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     h2 {
+        width: 100%;
         margin: 0;
         font-size: 200%;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -133,6 +139,7 @@ body {
         width: 100%; /* Ajusta el ancho para que no se superponga con la barra lateral */
         height: auto;
         color: #4A4A4A;
+        
 
         h3 {
             text-align: center;
@@ -148,6 +155,16 @@ body {
         flex-direction: column;
         text-align: justify;
         overflow: auto;
+        .img-sobre-mi {
+            height: 20vw;
+            width: 100%;
+            overflow: hidden;
+            img {
+                position: relative;
+                bottom: 600px;
+                left: 200px
+            };
+        }
     }
 
     .container-proyectos {
@@ -205,6 +222,7 @@ $background-bar: #e0e0e0;
     }
 
     .progress-bar {
+        padding: 25px;
         margin-bottom: 20px;
 
         label {
@@ -295,10 +313,19 @@ $background-bar: #e0e0e0;
 
 
 @media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
+    * {
+        box-sizing: border-box; /* Asegura que el padding y el border estén dentro del ancho/alto */
     }
-    .checklist {
+    body {
+        overflow-x:auto;
+        h1 {
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+    }
+    body .checklist {
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -309,21 +336,19 @@ $background-bar: #e0e0e0;
         }
     }
 
-    .aside {
-        position: relative; /* Cambiar a posición relativa en pantallas pequeñas */
-        width: 100%; /* Tomar el ancho completo */
-        height: auto; /* Permitir que la altura se ajuste al contenido */
-        visibility: visible; /* Asegurarse de que sea visible */
-        opacity: 1; /* Asegurarse de que sea visible */
-    }
 
     body .container-proyectos {
         padding: 0;
-        width: 100%;
-
+        width: 90%;
+        p {
+            text-align: justify;
+            border-style: outset;
+            margin: 5px;
+            background-color: $primary_color;
+        }
         .proyectos {
             .img {
-                width: 100%;
+                width: 90%;
             }
         }
     }
@@ -335,11 +360,15 @@ $background-bar: #e0e0e0;
     body .sobre-mi {
         padding: 0;
         height: auto;
-        width: 350%; /* Cambiar el ancho a 100% */
+        width: 100vw; /* Cambiar el ancho a 100% */
         flex-direction: column;
-        text-align: center;
+
         .column {
-            width: 80vw;
+            width: 90%;
+            .img-sobre-mi {
+                display: none;
+            }
+            
         }
     }
 

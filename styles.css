@@ -111,12 +111,21 @@ body .sobre-mi {
   background-color: #0a042d;
   display: flex;
   flex-direction: row;
-  width: 100%; /* Ajusta el ancho para que no se superponga con la barra lateral */
-  height: auto;
+  width: 100vw; /* Ajusta el ancho para que no se superponga con la barra lateral */
+  height: 400px;
   color: #4A4A4A;
+  overflow: hidden;
+}
+body .sobre-mi .column {
+  width: 60vw;
 }
 body .sobre-mi h3 {
   text-align: center;
+}
+body .sobre-mi .img-sobre-mi {
+  width: 20vw;
+  position: relative;
+  bottom: 550px;
 }
 body .column {
   color: rgba(224, 224, 224, 0.9215686275);
@@ -240,7 +249,7 @@ body .fullstack {
   body .sobre-mi .column {
     width: 90%;
   }
-  body .sobre-mi .column .img-sobre-mi {
+  body .sobre-mi .img-sobre-mi {
     display: none;
   }
   body header {

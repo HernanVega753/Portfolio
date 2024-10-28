@@ -136,13 +136,23 @@ body {
         background-color: $primary_color;
         display: flex;
         flex-direction: row;
-        width: 100%; /* Ajusta el ancho para que no se superponga con la barra lateral */
-        height: auto;
+        width: 100vw; /* Ajusta el ancho para que no se superponga con la barra lateral */
+        height: 400px;
         color: #4A4A4A;
+        overflow: hidden;
+
+        .column {
+            width: 60vw;
+        }
         
 
         h3 {
             text-align: center;
+        }
+        .img-sobre-mi {
+            width: 20vw;
+            position: relative;
+            bottom: 550px;
         }
     }
 
@@ -283,10 +293,9 @@ body {
 
         .column {
             width: 90%;
-            .img-sobre-mi {
-                display: none;
-            }
-            
+        }
+        .img-sobre-mi {
+            display: none;
         }
     }
 

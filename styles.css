@@ -300,6 +300,7 @@ body .fullstack {
     width: 90%;
   }
   body .container-proyectos p {
+    display: none;
     text-align: justify;
     border-style: outset;
     margin: 5px;

@@ -13,6 +13,44 @@ $background-color: #4A4A4A;
 $tertiary-color: #e0e0e0;
 $fill-color: #f75f35;
 
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.background {
+    z-index: -2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, hsl(241, 100%, 30%), #484871aa);
+    background-size: 400% 400%; // Tamaño del gradiente
+    animation: gradientAnimation 15s ease infinite; // Animación del gradiente
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.content {
+    position: relative;
+    color: white; // Color del texto
+    text-align: center;
+    padding-top: 50px; // Espacio superior
+}
+
+
 .container-short-divider {
     .short-divider {
         height: 2px; /* Altura de la línea */
@@ -66,21 +104,17 @@ body {
         .img-hernan-container {
             overflow: hidden;
             width: 200px;
-            margin-top: 2vh;
-            padding: 20px;
-            background-color: $primary_color;
             height: 200px;
-            margin-bottom: 20px;
             border-style: outset;
             border-radius: 50%;
             border-color: $primary_color;
+            display: flex;
+            background-color: white;
+            margin-top: 5vh;
 
 
             .img-hernan {
-                position: relative;
-                width: 250px;
-                top: -70px;
-                right: 30px;
+                
             }
         }
 
@@ -131,6 +165,7 @@ body {
         border-left: none;
         border-right: none;
         margin-bottom: 30px;
+        margin-top: 40px;
 
         h2 {
             width: 50%;
@@ -142,48 +177,49 @@ body {
     .sobre-mi {
         background-color: $primary_color;
         display: flex;
-        flex-direction: row;
-        width: 100vw; /* Ajusta el ancho para que no se superponga con la barra lateral */
-        height: 400px;
+        width: 100%; /* Ajusta el ancho para que no se superponga con la barra lateral */
+        height: auto;
         color: #4A4A4A;
         overflow: hidden;
-
+        align-items: center;
+        justify-content: center;
         .column {
-            width: 60vw;
+            border-style: dashed;
+            border-color: rgba(245, 245, 245, 0.525);
+            background-color: black;
         }
-        
 
         h3 {
             text-align: center;
         }
         .img-sobre-mi {
+            display: none;
             width: 20vw;
             position: relative;
             bottom: 550px;
         }
-    }
-
-    .column {
-        color: $text_color;
-        width: 100%;
-        margin: 15px;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-        overflow: auto;
-        .img-sobre-mi {
-            height: 20vw;
-            width: 100%;
-            overflow: hidden;
-            img {
-                position: relative;
-                bottom: 600px;
-                left: 200px
-            };
+        .column {
+            color: $text_color;
+            width: 60%;
+            margin: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            overflow: auto;
+            
+            .img-sobre-mi {
+                height: 20vw;
+                width: 100%;
+                overflow: hidden;
+                img {
+                    position: relative;
+                    bottom: 600px;
+                    left: 200px
+                };
+            }
         }
     }
-
     .container-proyectos {
         width: calc(100% - 150px); /* Ajusta el ancho para que no se superponga con la barra lateral */
         display: flex;
@@ -213,6 +249,13 @@ body {
 
     .subtitulo {
         text-align: center;
+        margin-top: 50px;
+        H3 {
+            border-top: $tertiary-color;
+            border-top-style:inset;
+            border-width: 30px;
+            background-color: $primary_color;
+        }
     }
 
     footer {
@@ -235,6 +278,11 @@ body {
             margin: 2vw;
             border-radius: 10%;
         }
+        img:hover {
+            background-color: #000;
+            background-color: white;
+            
+        }
     }
     
     .fullstack {
@@ -256,12 +304,14 @@ body {
         overflow-x:auto;
         h1 {
             font-size: 30px;
+            margin-top: 6vh;
         }
         h2 {
             font-size: 20px;
         }
         .fullstack {
-            margin-bottom: 20vh;
+            margin-bottom: 8vh;
+            margin-top: 7vh;
         }
     }
     body .tecnologias {
@@ -269,8 +319,11 @@ body {
         flex-direction: row;
         img {
             padding: 0.5vw;
-            width: 15vw;
+            width: 13vw;
         }
+    }
+    body .subtitulo {
+        margin-top: 30px;
     }
 
 
@@ -297,12 +350,14 @@ body {
 
     body .sobre-mi {
         padding: 0;
-        height: auto;
+        height: 100%;
         width: 100vw; /* Cambiar el ancho a 100% */
         flex-direction: column;
 
         .column {
             width: 90%;
+            border-style: dashed;
+            border-color: white;
         }
         .img-sobre-mi {
             display: none;

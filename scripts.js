@@ -35,10 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const contenedor = document.getElementById('columnSobreMi');
 
     button.addEventListener('click', () => {
-    if (contenedor.style.height === '200px') {
-        contenedor.style.height = 'auto'; // Nueva altura expandida
-    } else {
-        contenedor.style.height = '200px'; // Altura original
-    }
+        if (contenedor.style.height === '90px' || contenedor.style.height === '') {
+            contenedor.style.height = '380px'; // Expande a 700px
+        } else {
+            contenedor.style.height = '90px'; // Colapsa a 200px
+        }
     });
+
+    
 }); 

@@ -183,6 +183,9 @@ header .contacto img {
   overflow: auto;
   background-color: #0a042d;
 }
+.sobre-mi .btn-mas {
+  display: none;
+}
 
 .container-proyectos {
   width: calc(100% - 150px);
@@ -310,6 +313,8 @@ footer {
   }
   .container-proyectos H3 {
     font-size: 55%;
+    margin: 10px;
+    text-align: center;
   }
   .container-proyectos p {
     display: none;
@@ -323,13 +328,13 @@ footer {
   .sobre-mi {
     width: 100vw;
     flex-direction: column;
-    overflow: hidden;
   }
   .sobre-mi H3 {
     font-size: 100%;
     text-align: center;
   }
   .sobre-mi p {
+    overflow: hidden;
     font-size: small;
     margin: 0;
   }
@@ -340,6 +345,7 @@ footer {
     border-bottom: #0a042d;
   }
   .sobre-mi .btn-mas {
+    display: flex;
     background-color: #0a042d;
     color: rgba(224, 224, 224, 0.9215686275);
     font-family: "Courier New", Courier, monospace;

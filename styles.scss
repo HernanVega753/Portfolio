@@ -208,6 +208,9 @@ header {
     overflow: auto;
     background-color: $primary_color;
   }
+  .btn-mas {
+    display: none;
+  }
 }
 
 .container-proyectos {
@@ -351,6 +354,8 @@ footer {
     width: 90%;
     H3 {
         font-size: 55%;
+        margin: 10px;
+        text-align: center;
     }
 
     p {
@@ -369,12 +374,12 @@ footer {
   .sobre-mi {
     width: 100vw;
     flex-direction: column;
-    overflow: hidden;
     H3 {
         font-size: 100%;
         text-align: center;
     }
     p {
+        overflow: hidden;
         font-size: small;
         margin: 0;
     }
@@ -386,6 +391,7 @@ footer {
       border-bottom: $primary_color;
     }
     .btn-mas {
+        display: flex;
         background-color: $primary_color;
         color: $text_color;
         font-family: 'Courier New', Courier, monospace;

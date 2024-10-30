@@ -31,4 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         delay += 600; // Ajuste para el retardo entre enlaces
     });
+    const button = document.getElementById('btnMas');
+    const contenedor = document.getElementById('columnSobreMi');
+
+    button.addEventListener('click', () => {
+    if (contenedor.style.height === '200px') {
+        contenedor.style.height = 'auto'; // Nueva altura expandida
+    } else {
+        contenedor.style.height = '200px'; // Altura original
+    }
+    });
 }); 

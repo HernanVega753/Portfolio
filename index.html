@@ -10,8 +10,12 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="styles.css">
+
     </head>
+    <div class="background"></div>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
@@ -20,21 +24,24 @@
         <header>
             
             <div class="img-hernan-container">
-                <img class="img-hernan" src="/img/HernanFoto.jpg" alt="">
+                <img class="img-hernan" src="./img/HernanFoto.png" alt="Hernan Vega">
             </div>
             
             <H1>HERNÁN PABLO VEGA</H1>
 
             <H2 class="fullstack">Programador Fullstack</H2>
+            
             <div class="contacto" id="contacto">
-                <a class="email" href="https://hervega123@gmail.com">Email</a>
-                <a class="linkedin" href="https://linkedin.com/in/hervega">LinkedIn</a>
-                <a class="github" href="https://github.com/HernanVega753">GitHub</a>
+
+                <a class="email" href="https://hervega123@gmail.com"><img src="./img/tecnologias/mail.png" alt="email"></a>
+                
+                <a class="linkedin" href="https://linkedin.com/in/hervega"><img src="./img/tecnologias/linkedin.png" alt="LinkedIn"></a>
+
+                <a class="github" href="https://github.com/HernanVega753"><img src="./img/tecnologias/github.png" alt="GitHub/HernanVega753"></a>
             </div>
             <div class="img-container">
-                <img class="port-img" src="./img/programación como creación o fábrica de ideas y sueños.png" alt="">
+                <img class="port-img" src="./img/programación como creación o fábrica de ideas y sueños.png" alt="portada">
             </div>
-            <div class="full-divider"></div>
 
 
         </header>
@@ -42,9 +49,9 @@
             <h2>Sobre mí</h2>
         </div>
         
-        <div class="sobre-mi">
+        <div class="sobre-mi" id="sobreMi">
             
-                <div class="column">
+                <div class="column" id="columnSobreMi">
                     <h3>Como programador</h3>
                     <p>
                         Soy Técnico Universitario en programación
@@ -60,52 +67,72 @@
                         en la programación encontré maravillosas herramientas para poder hacer volar mi
                         imaginación y crear todo lo que pueda nacer de mi mente.
                     </p>
-                    <div class="img-sobre-mi">
-                        <img src="./img/programador.png" alt="">
-                    </div>
-                    
                 </div>
-                
+                <button class="btn-mas" id="btnMas">más</button>
         </div>
-        <div class="full-divider"></div>
         <div class="titulo">
             <h2>Proyectos</h2>
         </div>
+        
         <div>
             <div class="container-proyectos">
-                <div class="proyectos">
-                    <h3>Sistema Estudiantes</h3>
+
+                <div class="buttons-arrows">
+                    <button class="flechaIzquierda" id="flechaIzquierda"><img src="./img/flechaIzquierda.png" alt="flecha izquierda"></button>
+                </div>
+                
+                <div class="proyectos" id="SistemaEstudiantes">
+                    <img src="./img/SistemaEstudidantes.png" alt="Sistema Estudiantes">
+                    <h3>Sistema Registro de Estudiantes</h3>
                     <a href="https://github.com/HernanVega753/SistemaEstudiantes">
-                        <img src="./img/SistemaEstudidantes.png" alt="">
+                        <img class="github-proyectos" src="./img/tecnologias/githubProyectos.png" alt="GitHub Sistema Estudiantes">
                     </a>
                     <p>Sistema basado en listar, crear, modficicar y eliminar registros (CRUD). Se usó Java con Spring y Spring Boot, con MySql como base de datos</p>
+                    <div class="proyecto-makeof">
+                        <img src="./img/tecnologias/java.svg" alt="java">
+                        <img src="./img/tecnologias/springboot.png" alt="springboot">
+                        <img src="./img/tecnologias/jwt.svg" alt="jwt">
+                        <img src="./img/tecnologias/sql.png" alt="mysql">
+                    </div>
                 </div>
-                <div class="proyectos">
-                    <h3>Sistema Tienda de Libros</h3>
+                <div class="proyectos" id="TiendaLibros">
+                    <img src="./img/TiendaLibros.png" alt="">
+                    <h3>Sistema Tienda de Libros (Swing)</h3>
                     <a href="https://github.com/HernanVega753/SistemaTiendaDeLibros">
-                        <img src="./img/TiendaLibros.png" alt="">
+                        <img class="github-proyectos" src="./img/tecnologias/githubProyectos.png" alt="github Tienda de Libros">
                     </a>
                     <p>Sistema para tienda de libros que permite el listado, creación, modificación y eliminación de libros (CRUD). Se usó Java con Spring y Spring Boot, UI realizado con Swift y base de datos MySql</p>
+                    <div class="proyecto-makeof">
+                        <img src="./img/tecnologias/java.svg" alt="java">
+                        <img src="./img/tecnologias/springboot.png" alt="springboot">
+                        <img src="./img/tecnologias/jwt.svg" alt="jwt">
+                        <img src="./img/tecnologias/sql.png" alt="mysql">
+                    </div>
                 </div>
-            </div>
-            <div class="container-short-divider">
-                <div class="short-divider"></div>
-            </div>
-            
-            <div class="container-proyectos">
-                <div class="proyectos">
-                    <h3>Firuland</h3>
+                <div class="proyectos" id="Firuland">
+                    <img src="./img/firuland2.png" alt="firulan">
+                    <h3>Juego Firuland</h3>
                     <a href="https://github.com/HernanVega753/firuland">
-                        <img src="./img/firuland2.png" alt="">
+                        <img class="github-proyectos" src="./img/tecnologias/githubProyectos.png" alt="github firuland">
                     </a>
                     <p>Juego realizado en Godot Engine utilizando el lenguaje del motor (GdScript). Juego de un pequeño perro que tiene como misión alejar a las personas de su territorio.</p>
+                    <div class="proyecto-makeof">
+                        <img src="./img/tecnologias/godot.png" alt="">
+                    </div>
                 </div>
-                <div class="proyectos">
-                    <h3>Recuperador de Credenciales WiFi</h3>
+                <div class="proyectos" id="Credenciales">
+                    <img src="./img/Recuperación de credenciales wifi.png" alt="recuperación de credenciales">
+                    <h3>Recuperador de Credenciales (WiFi)</h3>
                     <a href="https://github.com/HernanVega753/credentials_wifi_recovery">
-                        <img src="./img/Recuperación de credenciales wifi.png" alt="">
+                        <img class="github-proyectos" src="./img/tecnologias/githubProyectos.png" alt="github recuperación de credenciales">
                     </a>
                     <p>Programa simple realizado en Python para recuperar las credenciales de WiFi de la computadora que lo utiliza</p>
+                    <div class="proyecto-makeof">
+                        <img src="./img/tecnologias/python.png" alt="python">
+                    </div>
+                </div>
+                <div class="buttons-arrows">
+                    <button class="flechaDerecha" id="flechaDerecha"><img src="./img/flechaDerecha.png" alt="flecha derecha"></button>
                 </div>
             </div>
         </div>
@@ -118,7 +145,7 @@
         <div class="educacion">
             <H3>Universidad Tecnológica Nacional</H3>
             <h4>San Rafael, Mendoza - Argentina</h4>
-            <a href="https://www.frsr.utn.edu.ar/"> <img src="./img/UTN.png" alt=""></a>
+            <a href="https://www.frsr.utn.edu.ar/"> <img src="./img/UTN.png" alt="UTN San Rafael"></a>
             <p>Tecnicatura Universitaria en Programación</p>
         </div>
         <div class="full-divider"></div>
@@ -126,80 +153,40 @@
         <div class="titulo">
             <h2>Skills</h2>
         </div>
-        <div class="progress-container">
-            <h3>Lenguajes de Programación</h3>
-            <div class="progress-bar">
-                <label>Python</label>
-                <div class="bar">
-                    <div class="progress python"></div>
-                </div>
-            </div>
-            <div class="progress-bar">
-                <label>Java</label>
-                <div class="bar">
-                    <div class="progress java"></div>
-                </div>
-            </div>
-            <div class="progress-bar">
-                <label>JavaScript</label>
-                <div class="bar">
-                    <div class="progress javascript"></div>
-                </div>
-            </div>
-            <div class="progress-bar">
-                <label>PHP</label>
-                <div class="bar">
-                    <div class="progress php"></div>
-                </div>
-            </div>
-            <div class="progress-bar">
-                <label>HTML</label>
-                <div class="bar">
-                    <div class="progress html"></div>
-                </div>
-            </div>
-            <div class="progress-bar">
-                <label>CSS</label>
-                <div class="bar">
-                    <div class="progress css"></div>
-                </div>
-            </div>
-            <div class="progress-bar">
-                <label>SCSS</label>
-                <div class="bar">
-                    <div class="progress scss"></div>
-                </div>
-            </div>
-        </div>
+        
+        <div class="tecnologias" id="tecnologias">
+            <img src="./img/tecnologias/html.svg" alt="html">
+            <img src="./img/tecnologias/css.svg" alt="css">
+            <img src="./img/tecnologias/js.svg" alt="JavaScript">
+            <img src="./img/tecnologias/java.svg" alt="java">
+            <img src="./img/tecnologias/python.svg" alt="python">
 
-        <div class="checklist">
-            <div>
-                <h3>Tecnologías</h3>
-                <ul class="tech-list">
-                    <li><input type="checkbox" id="docker" checked><label for="docker">Docker</label></li>
-                    <li><input type="checkbox" id="git" checked><label for="git">Git</label></li>
-                    <li><input type="checkbox" id="photoshop" checked><label for="photoshop">Photoshop</label></li>
-                    <li><input type="checkbox" id="postman" checked><label for="postman">Postman</label></li>
-                    <li><input type="checkbox" id="nodejs" checked><label for="nodejs">Node.js</label></li>
-                    <li><input type="checkbox" id="spring" checked><label for="spring">Spring</label></li>
-                    <li><input type="checkbox" id="springboot" checked><label for="springboot">Spring Boot</label></li>
-                    <li><input type="checkbox" id="godot" checked><label for="godot">Godot Engine</label></li>
-                    <li><input type="checkbox" id="blender" checked><label for="blender">Blender</label></li>
-                </ul>
-            </div>
-            <div>
-                <h3>Bases de datos</h3>
-                <ul class="database-list">
-                    <li><input type="checkbox" id="mongodb" checked><label for="mongodb">MongoDB</label></li>
-                    <li><input type="checkbox" id="mysql" checked><label for="mysql">MySQL</label></li>
-                    <li><input type="checkbox" id="postgresql" checked><label for="postgresql">PostgreSQL</label></li>
-                </ul>
-            </div>
+        </div>
+        <div class="subtitulo">
+            <h3>Lenguajes</h3>
         </div>
         
-    
+        <div class="tecnologias" id="tecnologias">
+            <img src="./img/tecnologias/mysql.svg" alt="mysql">
+            <img src="./img/tecnologias/postgresql.svg" alt="postgresql">
+            <img src="./img/tecnologias/mongodb.svg" alt="mongodb">
 
-        <script src="./skills.js"></script>
+        </div>
+        <div class="subtitulo">
+            <h3>Bases de datos</h3>
+        </div>
+        
+        <div class="tecnologias" id="tecnologias">
+            <img src="./img/tecnologias/git.svg" alt="git">
+            <img src="./img/tecnologias/postman.svg" alt="postman">
+            <img src="./img/tecnologias/docker.png" alt="docker">
+            <img src="./img/tecnologias/trello.png" alt="trello">
+
+        </div>
+        <div class="subtitulo">
+            <h3>Complementos</h3>
+        </div>
+    
         <script src="./scripts.js"></script>
         <footer>
             Portafolio de Hernán Pablo Vega | Creado con HTML - CSS y JavaScript | 2024®️

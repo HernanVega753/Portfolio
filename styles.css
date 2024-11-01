@@ -67,11 +67,16 @@ header .img-hernan-container {
   width: 200px;
   height: 200px;
   border-style: outset;
-  border-radius: 50%;
+  border-width: 8px;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-top-right-radius: 5%;
+  border-bottom-left-radius: 5%;
   border-color: #0a042d;
   display: flex;
-  background-color: white;
-  margin-top: 25vh;
+  background-color: rgb(192, 191, 255);
+  margin-top: 20vh;
+  margin-bottom: 20vh;
 }
 header .img-container {
   z-index: -1;
@@ -259,15 +264,20 @@ header .contacto img {
 }
 
 .educacion {
-  width: 100vp;
+  width: 70%;
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-self: center;
   background-color: #0a042d;
   border-style: inset;
   border-bottom-right-radius: 15%;
   border-top-left-radius: 15%;
-  background-color: #0a042d;
+}
+.educacion img {
+  margin: 25px;
+  width: 20vw;
+  height: auto;
 }
 
 .subtitulo {
@@ -302,6 +312,9 @@ footer {
   border-style: dashed;
   position: relative;
   top: 48px;
+  width: fit-content;
+  align-self: center;
+  justify-self: center;
 }
 .tecnologias img {
   width: 7vw;
@@ -322,7 +335,7 @@ footer {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   * {
     box-sizing: border-box;
   }
@@ -431,12 +444,13 @@ footer {
     width: 100%;
   }
   .sobre-mi {
+    padding: 0 auto;
     width: 100vw;
     flex-direction: column;
+    justify-items: center;
   }
   .sobre-mi H3 {
     font-size: 100%;
-    text-align: center;
   }
   .sobre-mi p {
     overflow: hidden;
@@ -444,7 +458,7 @@ footer {
     margin: 0;
   }
   .sobre-mi .column {
-    width: 90%;
+    width: 80%;
     border-style: groove;
     height: 90px;
     border-bottom: #0a042d;
@@ -468,7 +482,8 @@ footer {
     border-radius: 25%;
   }
   header .img-hernan-container {
-    margin-top: 25vh;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
     background-color: rgb(192, 191, 255);
   }
   header .img-hernan-container .img-hernan {

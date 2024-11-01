@@ -86,11 +86,16 @@ header {
     width: 200px;
     height: 200px;
     border-style: outset;
-    border-radius: 50%;
+    border-width: 8px;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
     border-color: $primary_color;
     display: flex;
-    background-color: white;
-    margin-top: 25vh;
+    background-color: rgb(192, 191, 255);
+    margin-top: 20vh;
+    margin-bottom: 20vh;
   }
 
   .img-container {
@@ -294,16 +299,23 @@ header {
 
 
 .educacion {
-  width: 100vp;
+  width: 70%;
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-self:center;
   background-color: $primary_color;
   border-style: inset;
   border-bottom-right-radius: 15%;
   border-top-left-radius: 15%;
-  background-color: $primary_color;
+  img {
+
+    margin: 25px;
+    width: 20vw;
+    height: auto;
+  }
 }
+
 
 .subtitulo {
   text-align: right;
@@ -339,7 +351,9 @@ footer {
   border-style: dashed;
   position: relative;
   top: 48px;
-  
+  width:fit-content;
+  align-self: center;
+  justify-self: center;
 
   img {
     width: 7vw;
@@ -363,9 +377,10 @@ footer {
 }
 
 // Media queries
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   * {
     box-sizing: border-box;
+
   }
 
   body {
@@ -482,11 +497,13 @@ footer {
   }
 
   .sobre-mi {
+    padding: 0 auto;
     width: 100vw;
     flex-direction: column;
+    justify-items: center;
+    
     H3 {
         font-size: 100%;
-        text-align: center;
     }
     p {
         overflow: hidden;
@@ -495,7 +512,7 @@ footer {
     }
 
     .column {
-      width: 90%;
+      width: 80%;
       border-style:groove;
       height: 90px;
       border-bottom: $primary_color;
@@ -521,7 +538,8 @@ footer {
   }
 
   header .img-hernan-container {
-    margin-top: 25vh;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
     background-color: rgb(192, 191, 255);
     .img-hernan {
       width: 60vw;

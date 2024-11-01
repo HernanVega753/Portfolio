@@ -55,10 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('Firuland'),
     document.getElementById('Credenciales')
     ];
+    const proyectosArrayP = [
+        document.getElementById('PSistemaEstudiantes'),
+        document.getElementById('PTiendaLibros'),
+        document.getElementById('PFiruland'),
+        document.getElementById('PCredenciales')
+        ];
 
     // Seleccionar el primer elemento del array
     let currentIndex = 0;
+    let currentIndexP = 0;
     let imagenPresente = proyectosArray[currentIndex];
+    let parrafoPresente = proyectosArrayP[currentIndex];
 
     // Establecer el estilo display en "block" para el primer elemento
     imagenPresente.style.display = "block";
@@ -66,23 +74,34 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonProyectosDerecha.addEventListener('click', () => {
     // Ocultar el proyecto actual
     proyectosArray[currentIndex].style.display = "none";
+    proyectosArrayP[currentIndexP].style.display = "none";
     
     // Incrementar el índice
     currentIndex = (currentIndex + 1) % proyectosArray.length;
+    currentIndexP = (currentIndexP + 1) % proyectosArray.length;
+
 
     // Mostrar el siguiente proyecto
     proyectosArray[currentIndex].style.display = "block";
+    proyectosArrayP[currentIndexP].style.display = "block";
+
     });
 
     buttonProyectosIzquierda.addEventListener('click', () => {
     // Ocultar el proyecto actual
     proyectosArray[currentIndex].style.display = "none";
+    proyectosArrayP[currentIndexP].style.display = "none";
+
     
     // Decrementar el índice y comprobar límites
     currentIndex = (currentIndex - 1 + proyectosArray.length) % proyectosArray.length;
+    currentIndexP = (currentIndexP - 1 + proyectosArrayP.length) % proyectosArrayP.length;
+
 
     // Mostrar el proyecto anterior
     proyectosArray[currentIndex].style.display = "block";
+    proyectosArrayP[currentIndexP].style.display = "block";
+
     });
     
 })

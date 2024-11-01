@@ -184,22 +184,24 @@ header .contacto img {
 }
 
 .container-proyectos {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   height: auto;
   align-items: center;
+  justify-self: center;
   justify-content: center;
   overflow-y: visible;
 }
 .container-proyectos .proyectos {
   padding: 25px;
+  margin: 25px;
   align-items: center;
   justify-items: center;
   display: none;
   position: relative;
-  width: 50%;
-  height: auto;
+  width: 600px;
+  height: 500px;
   border-color: #e0e0e0;
   border-style: inset;
   border-bottom-right-radius: 15%;
@@ -207,8 +209,10 @@ header .contacto img {
   background-color: #0a042d;
 }
 .container-proyectos p {
-  font-size: 14px;
+  font-size: 20px;
+  margin: 25px;
   text-align: justify;
+  width: 400px;
 }
 .container-proyectos img {
   padding: 2px;
@@ -369,8 +373,8 @@ footer {
   }
   .container-proyectos {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    width: 90vw;
     height: 100%;
     justify-content: center;
   }
@@ -381,19 +385,20 @@ footer {
   }
   .container-proyectos p {
     display: none;
+    text-align: justify;
+    width: fit-content;
   }
   .container-proyectos .proyectos {
     display: none;
-    flex-direction: column;
-    margin: 1vw;
-    padding: 1vw;
+    width: fit-content;
+    height: auto;
   }
   .container-proyectos img {
     border-top-left-radius: 25%;
   }
   .container-proyectos .github-proyectos {
-    width: 20px;
-    height: 20px;
+    width: 60px;
+    height: 60px;
     padding: 0;
     margin: 0;
   }
@@ -404,7 +409,7 @@ footer {
     justify-content: center;
   }
   .container-proyectos .proyecto-makeof img {
-    width: 10%;
+    width: 20%;
     height: auto;
   }
   .container-proyectos .buttons-arrows {
@@ -429,13 +434,13 @@ footer {
     height: 0;
   }
   .container-proyectos .flechaIzquierda {
+    display: none;
     background-color: transparent;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-right: 15px solid black;
   }
   .container-proyectos .flechaDerecha {
-    background-color: transparent;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 15px solid black;

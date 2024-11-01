@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Animación para los elementos H2
     const moveFullstack = () => {
-        programadorFullstack.style.transition = 'opacity 1.5s ease-in-out, transform 1.5s ease-in-out';
+        programadorFullstack.style.transition = 'opacity 1.5s ease-in-out, transform 2.5s ease-in-out';
         programadorFullstack.style.opacity = '0';
         programadorFullstack.style.transform = 'translateX(-150px)'; // Aparece desde la izquierda
  
@@ -50,11 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Definir correctamente el array de elementos
     const proyectosArray = [
-    document.getElementById('SistemaEstudiantes'),
-    document.getElementById('TiendaLibros'),
-    document.getElementById('Firuland'),
-    document.getElementById('Credenciales')
-    ];
+        document.getElementById('SistemaEstudiantes'),
+        document.getElementById('TiendaLibros'),
+        document.getElementById('Firuland'),
+        document.getElementById('Credenciales')
+        ];
     const proyectosArrayP = [
         document.getElementById('PSistemaEstudiantes'),
         document.getElementById('PTiendaLibros'),
@@ -66,10 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let currentIndexP = 0;
     let imagenPresente = proyectosArray[currentIndex];
-    let parrafoPresente = proyectosArrayP[currentIndex];
+    let parrafoPresente = proyectosArrayP[currentIndexP];
 
     // Establecer el estilo display en "block" para el primer elemento
     imagenPresente.style.display = "block";
+    parrafoPresente.style.display = "block";
 
     buttonProyectosDerecha.addEventListener('click', () => {
     // Ocultar el proyecto actual

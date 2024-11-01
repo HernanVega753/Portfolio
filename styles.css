@@ -209,10 +209,13 @@ header .contacto img {
   background-color: #0a042d;
 }
 .container-proyectos p {
+  display: NONE;
   font-size: 20px;
   margin: 25px;
   text-align: justify;
   width: 400px;
+  border-style: dotted;
+  padding: 25px;
 }
 .container-proyectos img {
   padding: 2px;
@@ -268,20 +271,27 @@ header .contacto img {
 }
 
 .educacion {
-  width: 70%;
+  width: 50000px;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-self: center;
+  text-align: center;
   background-color: #0a042d;
   border-style: inset;
-  border-bottom-right-radius: 15%;
-  border-top-left-radius: 15%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding: 20px;
 }
 .educacion img {
   margin: 25px;
-  width: 20vw;
+  width: 15vw;
   height: auto;
+}
+.educacion H2 {
+  text-align: center;
+  padding: 30px;
 }
 
 .subtitulo {
@@ -374,24 +384,28 @@ footer {
   .container-proyectos {
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 350px;
     height: 100%;
     justify-content: center;
   }
   .container-proyectos H3 {
-    font-size: 55%;
-    margin: 10px;
+    font-size: 18px;
+    margin: 5px;
     text-align: center;
   }
   .container-proyectos p {
     display: none;
+    margin-top: 0;
+    font-size: 16px;
     text-align: justify;
     width: fit-content;
+    border-style: dotted;
+    padding: 3%;
   }
   .container-proyectos .proyectos {
     display: none;
     width: fit-content;
-    height: auto;
+    height: fit-content;
   }
   .container-proyectos img {
     border-top-left-radius: 25%;
@@ -399,11 +413,8 @@ footer {
   .container-proyectos .github-proyectos {
     width: 60px;
     height: 60px;
-    padding: 0;
-    margin: 0;
   }
   .container-proyectos .proyecto-makeof {
-    padding-bottom: 25px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -441,6 +452,7 @@ footer {
     border-right: 15px solid black;
   }
   .container-proyectos .flechaDerecha {
+    background-color: transparent;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 15px solid black;
@@ -494,10 +506,6 @@ footer {
   header .img-hernan-container .img-hernan {
     width: 60vw;
     right: 30px;
-  }
-  .educacion {
-    padding-left: 0;
-    margin: 5%;
   }
   .educacion H3 {
     font-size: 100%;

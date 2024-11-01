@@ -239,10 +239,13 @@ header {
   }
 
   p {
+    display: NONE;;
     font-size: 20px;
     margin: 25px;
     text-align: justify;
     width: 400px;
+    border-style: dotted;
+    padding: 25px;
   }
 
   img {
@@ -303,20 +306,27 @@ header {
 
 
 .educacion {
-  width: 70%;
+  width: 50000px;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   text-align: center;
-  justify-self:center;
   background-color: $primary_color;
   border-style: inset;
-  border-bottom-right-radius: 15%;
-  border-top-left-radius: 15%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding: 20px;
   img {
 
     margin: 25px;
-    width: 20vw;
+    width: 15vw;
     height: auto;
+  }
+  H2 {
+    text-align: center;
+    padding: 30px;
   }
 }
 
@@ -423,23 +433,30 @@ footer {
   .container-proyectos {
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 350px;
     height: 100%;
     justify-content: center;
     H3 {
-        font-size: 55%;
-        margin: 10px;
+        font-size: 18px;
+        margin: 5px;
         text-align: center;
+
     }
     p {
       display: none;
+      margin-top: 0;
+      font-size: 16px;
       text-align: justify;
       width: fit-content;
+      border-style: dotted;
+      padding: 3%;
     }
     .proyectos {
+      
       display: none;
       width: fit-content;
-      height: auto;
+      height: fit-content;
+
     }
     img {
 
@@ -448,11 +465,8 @@ footer {
     .github-proyectos {
       width: 60px;
       height: 60px;
-      padding: 0;
-      margin: 0;
     }
     .proyecto-makeof {
-      padding-bottom: 25px;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -491,6 +505,7 @@ footer {
       border-right: 15px solid black;
     }
     .flechaDerecha {
+      background-color: transparent;
       border-top: 10px solid transparent;
       border-bottom: 10px solid transparent;
       border-left: 15px solid black;
@@ -553,8 +568,7 @@ footer {
   }
 
   .educacion {
-    padding-left: 0;
-    margin: 5%;
+
     H3 {
         font-size: 100%;
     }

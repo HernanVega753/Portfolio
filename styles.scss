@@ -33,7 +33,7 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 300%;
   background: linear-gradient(270deg, hsl(241, 100%, 30%), #16166daa);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
@@ -86,11 +86,16 @@ header {
     width: 200px;
     height: 200px;
     border-style: outset;
-    border-radius: 50%;
+    border-width: 8px;
+    border-top-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
     border-color: $primary_color;
     display: flex;
-    background-color: white;
-    margin-top: 25vh;
+    background-color: rgb(192, 191, 255);
+    margin-top: 20vh;
+    margin-bottom: 20vh;
   }
 
   .img-container {
@@ -208,17 +213,22 @@ header {
 
 .container-proyectos {
   
-  
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
-  text-align: center;
+  height: auto;
   align-items: center;
-
+  justify-content: center;
+  overflow-y: visible;
+ 
   .proyectos {
-    margin: 6vw;
-    padding: 30px;
+    padding: 25px;
+    align-items: center;
+    justify-items: center;
+    display: none;
+    position: relative;
+    width: 50%;
+    height: auto;
     border-color: $tertiary_color;
     border-style: inset;
     border-bottom-right-radius: 15%;
@@ -227,47 +237,85 @@ header {
   }
 
   p {
+    font-size: 14px;
     text-align: justify;
-    padding-top: 10px;
   }
 
   img {
-    padding: 10px;
-    width: 95%;
+    padding: 2px;
+    width: 100%;
     background-color: $primary_color;
+    border-top-left-radius: 15%;
   }
   .github-proyectos {
-    margin-top: 10px;
     width: 70px;
     height: 70px;
-    
+    margin: 0
   }
   .github-proyectos:hover {
     transform: scale(1.3);
   }
   .proyecto-makeof {
-    margin-top: 10px;
+    padding-top: 25px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     img {
-      width: 50px;
-      height: 50px;
+      width: 10%;
+      height: auto;
     }
+  }
+  .buttons-arrows {
+    position: relative;
+  }
+  button {
+    
+    position: relative;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    border: none;
+  }
+  .flechaDerecha {
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid black;
+    margin: 25px;
+  }
+  .flechaIzquierda {
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid black;
+    margin: 25px;
+    
   }
 }
 
+
 .educacion {
-  width: 100vp;
+  width: 70%;
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-self:center;
   background-color: $primary_color;
   border-style: inset;
   border-bottom-right-radius: 15%;
   border-top-left-radius: 15%;
-  background-color: $primary_color;
+  img {
+
+    margin: 25px;
+    width: 20vw;
+    height: auto;
+  }
 }
+
 
 .subtitulo {
   text-align: right;
@@ -303,7 +351,9 @@ footer {
   border-style: dashed;
   position: relative;
   top: 48px;
-  
+  width:fit-content;
+  align-self: center;
+  justify-self: center;
 
   img {
     width: 7vw;
@@ -327,9 +377,10 @@ footer {
 }
 
 // Media queries
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   * {
     box-sizing: border-box;
+
   }
 
   body {
@@ -367,8 +418,9 @@ footer {
 
   .container-proyectos {
     display: flex;
-    flex-direction: column;
-    width: 70vw;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     H3 {
         font-size: 55%;
@@ -379,7 +431,7 @@ footer {
       display: none;
     }
     .proyectos {
-      display: flex;
+      display: none;
       flex-direction: column;
       margin: 1vw;
       padding: 1vw;
@@ -389,8 +441,54 @@ footer {
       border-top-left-radius: 25%;
     }
     .github-proyectos {
+      width: 20px;
+      height: 20px;
       padding: 0;
       margin: 0;
+    }
+    .proyecto-makeof {
+      padding-bottom: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      img {
+        width: 10%;
+        height: auto;
+      }
+    }
+    .buttons-arrows {
+      width: 100px;
+      height: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      border: none;
+    }
+    button {
+      margin-top: 0;
+      justify-content: center;
+      width: 4vw;
+      position: relative;
+      transition: 0.3s ease-in-out;
+      display: flex;
+      flex-direction: row;
+      width: 0;
+      height: 0;
+      
+    }
+    .flechaIzquierda {
+      background-color: transparent;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 15px solid black;
+    }
+    .flechaDerecha {
+      background-color: transparent;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 15px solid black;
     }
   }
 
@@ -399,11 +497,13 @@ footer {
   }
 
   .sobre-mi {
+    padding: 0 auto;
     width: 100vw;
     flex-direction: column;
+    justify-items: center;
+    
     H3 {
         font-size: 100%;
-        text-align: center;
     }
     p {
         overflow: hidden;
@@ -412,7 +512,7 @@ footer {
     }
 
     .column {
-      width: 90%;
+      width: 80%;
       border-style:groove;
       height: 90px;
       border-bottom: $primary_color;
@@ -438,7 +538,8 @@ footer {
   }
 
   header .img-hernan-container {
-    margin-top: 25vh;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
     background-color: rgb(192, 191, 255);
     .img-hernan {
       width: 60vw;
@@ -448,7 +549,7 @@ footer {
 
   .educacion {
     padding-left: 0;
-    margin: 7vw;
+    margin: 5%;
     H3 {
         font-size: 100%;
     }
@@ -459,6 +560,10 @@ footer {
     }
     p {
         font-size: 70%;
+    }
+    img {
+      width: 30vw;
+
     }
   }
 

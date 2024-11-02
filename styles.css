@@ -62,7 +62,12 @@ header {
   align-items: center;
   text-align: center;
 }
-header .img-hernan-container {
+header .supercontainer-hernan {
+  width: 100%;
+  justify-items: center;
+  padding-top: 250px;
+}
+header .supercontainer-hernan .img-hernan-container {
   overflow: hidden;
   width: 200px;
   height: 200px;
@@ -75,26 +80,26 @@ header .img-hernan-container {
   border-color: #0a042d;
   display: flex;
   background-color: rgb(192, 191, 255);
-  margin-top: 20vh;
   margin-bottom: 20vh;
 }
 header .img-container {
   z-index: -1;
-  position: absolute;
-  background-color: #0a042d;
-  justify-content: center;
-  width: 100%;
-  height: 35vh;
-  overflow: hidden;
-  border-color: #0a042d;
-  border-bottom-style: inset;
-}
-header .img-container .port-img {
-  top: -150px;
   width: 100%;
   height: auto;
-  background: url("path_to_image") no-repeat center;
-  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  background-color: rgb(168, 216, 232);
+  border-bottom-style: groove;
+  border-bottom-width: 6px;
+  border-color: black;
+}
+header .img-container .port-img {
+  width: 100%;
+  position: relative;
+  height: auto;
+  border-color: #0a042d;
+  border-bottom-style: groove;
+  border-width: 6px;
 }
 header .contacto {
   z-index: 2;
@@ -124,6 +129,13 @@ header .contacto img {
   border-bottom-right-radius: 25%;
   border-top-right-radius: 5%;
   border-bottom-left-radius: 5%;
+}
+
+.container-nombre {
+  width: 100%;
+}
+.container-nombre .nombre {
+  margin: 0;
 }
 
 .titulo {
@@ -460,6 +472,12 @@ footer {
   .titulo {
     width: 100%;
   }
+  .container-nombre {
+    padding: 5px;
+  }
+  .container-nombre .nombre {
+    margin: 0;
+  }
   .sobre-mi {
     padding: 0 auto;
     width: 100vw;
@@ -498,12 +516,17 @@ footer {
     font-family: "Courier New", Courier, monospace;
     border-radius: 25%;
   }
-  header .img-hernan-container {
-    margin-top: 20vh;
-    margin-bottom: 10vh;
+  header .supercontainer-hernan {
+    margin-top: 160px;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+  header .supercontainer-hernan .img-hernan-container {
+    padding: 0;
+    margin: 0;
     background-color: rgb(192, 191, 255);
   }
-  header .img-hernan-container .img-hernan {
+  header .supercontainer-hernan .img-hernan-container .img-hernan {
     width: 60vw;
     right: 30px;
   }

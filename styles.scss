@@ -80,41 +80,45 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  .img-hernan-container {
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    border-style: outset;
-    border-width: 8px;
-    border-top-left-radius: 25%;
-    border-bottom-right-radius: 25%;
-    border-top-right-radius: 5%;
-    border-bottom-left-radius: 5%;
-    border-color: $primary_color;
-    display: flex;
-    background-color: rgb(192, 191, 255);
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+  
+  .supercontainer-hernan {
+    width: 100%;
+    justify-items: center;
+    padding-top: 250px;
+    .img-hernan-container {
+      overflow: hidden;
+      width: 200px;
+      height: 200px;
+      border-style: outset;
+      border-width: 8px;
+      border-top-left-radius: 25%;
+      border-bottom-right-radius: 25%;
+      border-top-right-radius: 5%;
+      border-bottom-left-radius: 5%;
+      border-color: $primary_color;
+      display: flex;
+      background-color: rgb(192, 191, 255);
+      margin-bottom: 20vh;
+    }
   }
 
   .img-container {
     z-index: -1;
-    position: absolute;
-    background-color: $primary_color;
-    justify-content: center;
     width: 100%;
-    height: 35vh;
+    height: auto;
     overflow: hidden;
-    border-color: $primary_color;
-    border-bottom-style: inset;
-
+    position: absolute;
+    background-color: rgb(168, 216, 232);;
+    border-bottom-style: groove;
+    border-bottom-width: 6px;
+    border-color: black;
     .port-img {
-      top: -150px;
       width: 100%;
+      position: relative;
       height: auto;
-      background: url('path_to_image') no-repeat center;
-      background-size: cover;
+      border-color: $primary_color;
+      border-bottom-style: groove;
+      border-width: 6px;
     }
   }
 
@@ -150,7 +154,13 @@ header {
     }
   }
 }
-
+.container-nombre {
+  width: 100%;
+  
+  .nombre {
+    margin: 0;
+  }
+}
 // Sections
 .titulo {
   width: 100%;
@@ -515,6 +525,13 @@ footer {
   .titulo {
     width: 100%;
   }
+  .container-nombre {
+    padding: 5px;
+    
+    .nombre {
+      margin: 0;
+    }
+  }
 
   .sobre-mi {
     padding: 0 auto;
@@ -557,13 +574,19 @@ footer {
     }
   }
 
-  header .img-hernan-container {
-    margin-top: 20vh;
-    margin-bottom: 10vh;
-    background-color: rgb(192, 191, 255);
-    .img-hernan {
-      width: 60vw;
-      right: 30px;
+  header .supercontainer-hernan {
+    margin-top: 160px;
+    margin-bottom: 50px;
+    padding: 0;
+    
+      .img-hernan-container {
+      padding: 0;
+      margin: 0;
+      background-color: rgb(192, 191, 255);
+      .img-hernan {
+        width: 60vw;
+        right: 30px;
+      }
     }
   }
 

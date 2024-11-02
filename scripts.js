@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const programadorFullstack = document.getElementById('programadorFullstack');
     const contactoLinks = document.querySelectorAll('#contacto a'); // Todos los elementos <a> dentro de contacto
-    let delay = 400;
+    let delay = 0;
 
     // Animación para los elementos H2
     const moveFullstack = () => {
-        programadorFullstack.style.transition = 'opacity 1.5s ease-in-out, transform 2.5s ease-in-out';
+        programadorFullstack.style.transition = 'opacity 1.5s ease-in-out, transform 3.5s ease-in-out';
         programadorFullstack.style.opacity = '0';
         programadorFullstack.style.transform = 'translateX(-150px)'; // Aparece desde la izquierda
  
         setTimeout(() => {
             programadorFullstack.style.opacity = '1';
             programadorFullstack.style.transform = 'translateX(0)';
-        }, delay);
+        }, 1000);
     };
     moveFullstack()
 

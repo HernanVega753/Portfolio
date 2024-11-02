@@ -65,7 +65,7 @@ header {
 header .supercontainer-hernan {
   width: 100%;
   justify-items: center;
-  padding-top: 250px;
+  padding-top: 185px;
 }
 header .supercontainer-hernan .img-hernan-container {
   overflow: hidden;
@@ -84,6 +84,8 @@ header .supercontainer-hernan .img-hernan-container {
 }
 header .img-container {
   z-index: -1;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -94,9 +96,9 @@ header .img-container {
   border-color: black;
 }
 header .img-container .port-img {
-  width: 100%;
+  justify-self: center;
   position: relative;
-  height: auto;
+  height: 30%;
   border-color: #0a042d;
   border-bottom-style: groove;
   border-width: 6px;
@@ -388,10 +390,12 @@ footer {
   }
   .tecnologias img {
     padding: 0.5vw;
-    width: 13vw;
+    margin: 5px;
+    width: 7vw;
   }
   .subtitulo {
     margin-top: 30px;
+    font-size: 12px;
   }
   .container-proyectos {
     display: flex;
@@ -478,6 +482,26 @@ footer {
   .container-nombre .nombre {
     margin: 0;
   }
+  header.img-container {
+    z-index: -1;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    border-bottom-style: groove;
+    background-color: black;
+    border-bottom-width: 6px;
+    border-color: black;
+  }
+  header.img-container .port-img {
+    width: 100%;
+    position: relative;
+    height: auto;
+    border-color: #0a042d;
+    border-bottom-style: groove;
+    border-width: 6px;
+    right: 70px;
+  }
   .sobre-mi {
     padding: 0 auto;
     width: 100vw;
@@ -517,7 +541,7 @@ footer {
     border-radius: 25%;
   }
   header .supercontainer-hernan {
-    margin-top: 160px;
+    margin-top: 185px;
     margin-bottom: 50px;
     padding: 0;
   }

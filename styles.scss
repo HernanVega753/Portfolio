@@ -286,34 +286,19 @@ header {
     }
   }
   .buttons-arrows {
-    position: relative;
-  }
-  button {
-    
-    position: relative;
-    transition: 0.3s ease-in-out;
-    display: flex;
-    flex-direction: row;
-    border: none;
-  }
-  .flechaDerecha {
-    background-color: transparent;
-    width: 0;
-    height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 30px solid black;
-    margin: 25px;
-  }
-  .flechaIzquierda {
-    background-color: transparent;
-    width: 0;
-    height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-right: 30px solid black;
-    margin: 25px;
-    
+    .flechaDerecha {
+      background-color: transparent;
+      span {
+        font-size: 40px;
+      }
+    }
+    .flechaIzquierda {
+      background-color: transparent;
+      span {
+        font-size: 40px;
+      }
+      
+    }
   }
 }
 
@@ -491,14 +476,16 @@ footer {
       }
     }
     .buttons-arrows {
-      width: 100px;
-      height: auto;
+      width: 50px;
+      height: 50px;
       position: relative;
       display: flex;
       flex-direction: column;
       justify-content:center;
       align-items: center;
+      border-radius: 50%;
       border: none;
+      top: -20px;
     }
     button {
       margin-top: 0;
@@ -510,6 +497,8 @@ footer {
       flex-direction: row;
       width: 0;
       height: 0;
+      border-style: inset;
+      
       
     }
     .flechaIzquierda {
@@ -521,10 +510,12 @@ footer {
     }
     .flechaDerecha {
       background-color: transparent;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-left: 15px solid black;
+      border: none;
+      span {
+        font-size: 40px;
+      }
     }
+
   }
 
   .titulo {

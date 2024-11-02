@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Animación para los elementos H2
     const moveFullstack = () => {
-        programadorFullstack.style.transition = 'opacity 1.5s ease-in-out, transform 3.5s ease-in-out';
+        programadorFullstack.style.transition = 'opacity 2s ease-in-out, transform 2.1s ease-in-out';
         programadorFullstack.style.opacity = '0';
         programadorFullstack.style.transform = 'translateX(-150px)'; // Aparece desde la izquierda
  
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     moveFullstack()
 
-    delay += 400; 
+    delay += 2600; 
 
 
     

@@ -19,7 +19,7 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 300%;
   background: linear-gradient(270deg, hsl(241, 100%, 30%), rgba(22, 22, 109, 0.6666666667));
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
@@ -62,34 +62,46 @@ header {
   align-items: center;
   text-align: center;
 }
-header .img-hernan-container {
+header .supercontainer-hernan {
+  width: 100%;
+  justify-items: center;
+  padding-top: 185px;
+}
+header .supercontainer-hernan .img-hernan-container {
   overflow: hidden;
   width: 200px;
   height: 200px;
   border-style: outset;
-  border-radius: 50%;
+  border-width: 8px;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-top-right-radius: 5%;
+  border-bottom-left-radius: 5%;
   border-color: #0a042d;
   display: flex;
-  background-color: white;
-  margin-top: 25vh;
+  background-color: rgb(192, 191, 255);
+  margin-bottom: 20vh;
 }
 header .img-container {
   z-index: -1;
-  position: absolute;
-  background-color: #0a042d;
+  display: flex;
   justify-content: center;
   width: 100%;
-  height: 35vh;
+  height: auto;
   overflow: hidden;
-  border-color: #0a042d;
-  border-bottom-style: inset;
+  position: absolute;
+  background-color: rgb(168, 216, 232);
+  border-bottom-style: groove;
+  border-bottom-width: 6px;
+  border-color: black;
 }
 header .img-container .port-img {
-  top: -150px;
-  width: 100%;
-  height: auto;
-  background: url("path_to_image") no-repeat center;
-  background-size: cover;
+  justify-self: center;
+  position: relative;
+  height: 30%;
+  border-color: #0a042d;
+  border-bottom-style: groove;
+  border-width: 6px;
 }
 header .contacto {
   z-index: 2;
@@ -119,6 +131,13 @@ header .contacto img {
   border-bottom-right-radius: 25%;
   border-top-right-radius: 5%;
   border-bottom-left-radius: 5%;
+}
+
+.container-nombre {
+  width: 100%;
+}
+.container-nombre .nombre {
+  margin: 0;
 }
 
 .titulo {
@@ -179,22 +198,24 @@ header .contacto img {
 }
 
 .container-proyectos {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   height: auto;
   align-items: center;
+  justify-self: center;
   justify-content: center;
   overflow-y: visible;
 }
 .container-proyectos .proyectos {
   padding: 25px;
+  margin: 25px;
   align-items: center;
   justify-items: center;
   display: none;
   position: relative;
-  width: 50%;
-  height: auto;
+  width: 600px;
+  height: 500px;
   border-color: #e0e0e0;
   border-style: inset;
   border-bottom-right-radius: 15%;
@@ -202,8 +223,13 @@ header .contacto img {
   background-color: #0a042d;
 }
 .container-proyectos p {
-  font-size: 14px;
+  display: NONE;
+  font-size: 20px;
+  margin: 25px;
   text-align: justify;
+  width: 400px;
+  border-style: dotted;
+  padding: 25px;
 }
 .container-proyectos img {
   padding: 2px;
@@ -229,45 +255,41 @@ header .contacto img {
   width: 10%;
   height: auto;
 }
-.container-proyectos .buttons-arrows {
-  position: relative;
-}
-.container-proyectos button {
-  position: relative;
-  transition: 0.3s ease-in-out;
-  display: flex;
-  flex-direction: row;
-  border: none;
-}
-.container-proyectos .flechaDerecha {
+.container-proyectos .buttons-arrows .flechaDerecha {
   background-color: transparent;
-  width: 0;
-  height: 0;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 30px solid black;
-  margin: 25px;
 }
-.container-proyectos .flechaIzquierda {
+.container-proyectos .buttons-arrows .flechaDerecha span {
+  font-size: 40px;
+}
+.container-proyectos .buttons-arrows .flechaIzquierda {
   background-color: transparent;
-  width: 0;
-  height: 0;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-right: 30px solid black;
-  margin: 25px;
+}
+.container-proyectos .buttons-arrows .flechaIzquierda span {
+  font-size: 40px;
 }
 
 .educacion {
-  width: 100vp;
+  width: 50000px;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   text-align: center;
   background-color: #0a042d;
   border-style: inset;
-  border-bottom-right-radius: 15%;
-  border-top-left-radius: 15%;
-  background-color: #0a042d;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding: 20px;
+}
+.educacion img {
+  margin: 25px;
+  width: 15vw;
+  height: auto;
+}
+.educacion H2 {
+  text-align: center;
+  padding: 30px;
 }
 
 .subtitulo {
@@ -302,6 +324,9 @@ footer {
   border-style: dashed;
   position: relative;
   top: 48px;
+  width: fit-content;
+  align-self: center;
+  justify-self: center;
 }
 .tecnologias img {
   width: 7vw;
@@ -322,7 +347,7 @@ footer {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   * {
     box-sizing: border-box;
   }
@@ -349,60 +374,66 @@ footer {
   }
   .tecnologias img {
     padding: 0.5vw;
-    width: 13vw;
+    margin: 5px;
+    width: 7vw;
   }
   .subtitulo {
     margin-top: 30px;
+    font-size: 12px;
   }
   .container-proyectos {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    width: 350px;
     height: 100%;
     justify-content: center;
   }
   .container-proyectos H3 {
-    font-size: 55%;
-    margin: 10px;
+    font-size: 18px;
+    margin: 5px;
     text-align: center;
   }
   .container-proyectos p {
     display: none;
+    margin-top: 0;
+    font-size: 16px;
+    text-align: justify;
+    width: fit-content;
+    border-style: dotted;
+    padding: 3%;
   }
   .container-proyectos .proyectos {
     display: none;
-    flex-direction: column;
-    margin: 1vw;
-    padding: 1vw;
+    width: fit-content;
+    height: fit-content;
   }
   .container-proyectos img {
     border-top-left-radius: 25%;
   }
   .container-proyectos .github-proyectos {
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    margin: 0;
+    width: 60px;
+    height: 60px;
   }
   .container-proyectos .proyecto-makeof {
-    padding-bottom: 25px;
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
   .container-proyectos .proyecto-makeof img {
-    width: 10%;
+    width: 20%;
     height: auto;
   }
   .container-proyectos .buttons-arrows {
-    width: 100px;
-    height: auto;
+    width: 50px;
+    height: 50px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
     border: none;
+    top: -20px;
   }
   .container-proyectos button {
     margin-top: 0;
@@ -414,8 +445,10 @@ footer {
     flex-direction: row;
     width: 0;
     height: 0;
+    border-style: inset;
   }
   .container-proyectos .flechaIzquierda {
+    display: none;
     background-color: transparent;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
@@ -423,20 +456,48 @@ footer {
   }
   .container-proyectos .flechaDerecha {
     background-color: transparent;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid black;
+    border: none;
+  }
+  .container-proyectos .flechaDerecha span {
+    font-size: 40px;
   }
   .titulo {
     width: 100%;
   }
+  .container-nombre {
+    padding: 5px;
+  }
+  .container-nombre .nombre {
+    margin: 0;
+  }
+  header.img-container {
+    z-index: -1;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    border-bottom-style: groove;
+    background-color: black;
+    border-bottom-width: 6px;
+    border-color: black;
+  }
+  header.img-container .port-img {
+    width: 100%;
+    position: relative;
+    height: auto;
+    border-color: #0a042d;
+    border-bottom-style: groove;
+    border-width: 6px;
+    right: 70px;
+  }
   .sobre-mi {
+    padding: 0 auto;
     width: 100vw;
     flex-direction: column;
+    justify-items: center;
   }
   .sobre-mi H3 {
     font-size: 100%;
-    text-align: center;
   }
   .sobre-mi p {
     overflow: hidden;
@@ -444,7 +505,7 @@ footer {
     margin: 0;
   }
   .sobre-mi .column {
-    width: 90%;
+    width: 80%;
     border-style: groove;
     height: 90px;
     border-bottom: #0a042d;
@@ -467,17 +528,19 @@ footer {
     font-family: "Courier New", Courier, monospace;
     border-radius: 25%;
   }
-  header .img-hernan-container {
-    margin-top: 25vh;
+  header .supercontainer-hernan {
+    margin-top: 185px;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+  header .supercontainer-hernan .img-hernan-container {
+    padding: 0;
+    margin: 0;
     background-color: rgb(192, 191, 255);
   }
-  header .img-hernan-container .img-hernan {
+  header .supercontainer-hernan .img-hernan-container .img-hernan {
     width: 60vw;
     right: 30px;
-  }
-  .educacion {
-    padding-left: 0;
-    margin: 5%;
   }
   .educacion H3 {
     font-size: 100%;

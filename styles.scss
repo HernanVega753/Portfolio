@@ -1,15 +1,13 @@
-
 // Variables
 $primary_color: #0a042d;
 $secondary_color: #6400f9;
 $accent_color: #f75f35;
 $text_color: #e0e0e0eb;
 $text_color_2: #00f746;
-$background_color: #4A4A4A;
+$background_color: #4a4a4a;
 $tertiary_color: #e0e0e0;
 $fill_color: #f75f35;
 $circle_size: 100px;
-
 
 * {
   margin: 0;
@@ -18,11 +16,12 @@ $circle_size: 100px;
 }
 
 // Global styles
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  font-family: 'Open Sans', 'Montserrat', 'sans-serif';
+  font-family: "Open Sans", "Montserrat", "sans-serif";
   color: $text_color;
   overflow-x: hidden;
 }
@@ -33,8 +32,8 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(270deg, hsl(241, 100%, 30%), #16166daa);
+  height: 300%;
+  background: linear-gradient(270deg, hsl(241, 83%, 77%), #e8e2ff);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
 }
@@ -73,7 +72,6 @@ h2 {
   padding-top: 50px;
 }
 
-
 // Header styles
 header {
   display: flex;
@@ -81,35 +79,47 @@ header {
   align-items: center;
   text-align: center;
 
-  .img-hernan-container {
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    border-style: outset;
-    border-radius: 50%;
-    border-color: $primary_color;
-    display: flex;
-    background-color: white;
-    margin-top: 25vh;
+  .supercontainer-hernan {
+    width: 100%;
+    justify-items: center;
+    padding-top: 185px;
+    .img-hernan-container {
+      overflow: hidden;
+      width: 200px;
+      height: 200px;
+      border-style: outset;
+      border-width: 8px;
+      border-top-left-radius: 25%;
+      border-bottom-right-radius: 25%;
+      border-top-right-radius: 5%;
+      border-bottom-left-radius: 5%;
+      border-color: $primary_color;
+      display: flex;
+      background-color: rgb(192, 191, 255);
+      margin-bottom: 20vh;
+    }
   }
 
   .img-container {
     z-index: -1;
-    position: absolute;
-    background-color: $primary_color;
+    display: flex;
     justify-content: center;
     width: 100%;
-    height: 35vh;
+    height: auto;
     overflow: hidden;
-    border-color: $primary_color;
-    border-bottom-style: inset;
+    position: absolute;
+    background-color: rgb(168, 216, 232);
+    border-bottom-style: groove;
+    border-bottom-width: 6px;
+    border-color: black;
 
     .port-img {
-      top: -150px;
-      width: 100%;
-      height: auto;
-      background: url('path_to_image') no-repeat center;
-      background-size: cover;
+      justify-self: center;
+      position: relative;
+      height: 30%;
+      border-color: $primary_color;
+      border-bottom-style: groove;
+      border-width: 6px;
     }
   }
 
@@ -145,7 +155,13 @@ header {
     }
   }
 }
+.container-nombre {
+  width: 100%;
 
+  .nombre {
+    margin: 0;
+  }
+}
 // Sections
 .titulo {
   width: 100%;
@@ -173,13 +189,13 @@ header {
   display: flex;
   width: 100%;
   height: auto;
-  color: #4A4A4A;
+  color: #4a4a4a;
   overflow: hidden;
   align-items: center;
   justify-content: center;
 
   .column {
-    border-style:groove;
+    border-style: groove;
     border-width: 5px;
     border-bottom-right-radius: 15%;
     border-top-left-radius: 15%;
@@ -207,23 +223,24 @@ header {
 }
 
 .container-proyectos {
-  
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   height: auto;
   align-items: center;
+  justify-self: center;
   justify-content: center;
   overflow-y: visible;
- 
+
   .proyectos {
     padding: 25px;
+    margin: 25px;
     align-items: center;
     justify-items: center;
     display: none;
     position: relative;
-    width: 50%;
-    height: auto;
+    width: 600px;
+    height: 500px;
     border-color: $tertiary_color;
     border-style: inset;
     border-bottom-right-radius: 15%;
@@ -232,8 +249,13 @@ header {
   }
 
   p {
-    font-size: 14px;
+    display: NONE;
+    font-size: 20px;
+    margin: 25px;
     text-align: justify;
+    width: 400px;
+    border-style: dotted;
+    padding: 25px;
   }
 
   img {
@@ -245,7 +267,7 @@ header {
   .github-proyectos {
     width: 70px;
     height: 70px;
-    margin: 0
+    margin: 0;
   }
   .github-proyectos:hover {
     transform: scale(1.3);
@@ -261,48 +283,43 @@ header {
     }
   }
   .buttons-arrows {
-    position: relative;
-  }
-  button {
-    
-    position: relative;
-    transition: 0.3s ease-in-out;
-    display: flex;
-    flex-direction: row;
-    border: none;
-  }
-  .flechaDerecha {
-    background-color: transparent;
-    width: 0;
-    height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 30px solid black;
-    margin: 25px;
-  }
-  .flechaIzquierda {
-    background-color: transparent;
-    width: 0;
-    height: 0;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-right: 30px solid black;
-    margin: 25px;
-    
+    .flechaDerecha {
+      background-color: transparent;
+      span {
+        font-size: 40px;
+      }
+    }
+    .flechaIzquierda {
+      background-color: transparent;
+      span {
+        font-size: 40px;
+      }
+    }
   }
 }
 
-
 .educacion {
-  width: 100vp;
+  width: 50000px;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   text-align: center;
   background-color: $primary_color;
   border-style: inset;
-  border-bottom-right-radius: 15%;
-  border-top-left-radius: 15%;
-  background-color: $primary_color;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding: 20px;
+  img {
+    margin: 25px;
+    width: 15vw;
+    height: auto;
+  }
+  H2 {
+    text-align: center;
+    padding: 30px;
+  }
 }
 
 .subtitulo {
@@ -339,7 +356,9 @@ footer {
   border-style: dashed;
   position: relative;
   top: 48px;
-  
+  width: fit-content;
+  align-self: center;
+  justify-self: center;
 
   img {
     width: 7vw;
@@ -363,7 +382,7 @@ footer {
 }
 
 // Media queries
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
   * {
     box-sizing: border-box;
   }
@@ -394,62 +413,67 @@ footer {
   }
   .tecnologias img {
     padding: 0.5vw;
-    width: 13vw;
+    margin: 5px;
+    width: 7vw;
   }
 
   .subtitulo {
     margin-top: 30px;
+    font-size: 12px;
   }
 
   .container-proyectos {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
+    width: 350px;
     height: 100%;
     justify-content: center;
     H3 {
-        font-size: 55%;
-        margin: 10px;
-        text-align: center;
+      font-size: 18px;
+      margin: 5px;
+      text-align: center;
     }
     p {
       display: none;
+      margin-top: 0;
+      font-size: 16px;
+      text-align: justify;
+      width: fit-content;
+      border-style: dotted;
+      padding: 3%;
     }
     .proyectos {
       display: none;
-      flex-direction: column;
-      margin: 1vw;
-      padding: 1vw;
+      width: fit-content;
+      height: fit-content;
     }
     img {
-
       border-top-left-radius: 25%;
     }
     .github-proyectos {
-      width: 20px;
-      height: 20px;
-      padding: 0;
-      margin: 0;
+      width: 60px;
+      height: 60px;
     }
     .proyecto-makeof {
-      padding-bottom: 25px;
       display: flex;
       flex-direction: row;
       justify-content: center;
       img {
-        width: 10%;
+        width: 20%;
         height: auto;
       }
     }
     .buttons-arrows {
-      width: 100px;
-      height: auto;
+      width: 50px;
+      height: 50px;
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content:center;
+      justify-content: center;
       align-items: center;
+      border-radius: 50%;
       border: none;
+      top: -20px;
     }
     button {
       margin-top: 0;
@@ -461,9 +485,10 @@ footer {
       flex-direction: row;
       width: 0;
       height: 0;
-      
+      border-style: inset;
     }
     .flechaIzquierda {
+      display: none;
       background-color: transparent;
       border-top: 10px solid transparent;
       border-bottom: 10px solid transparent;
@@ -471,32 +496,62 @@ footer {
     }
     .flechaDerecha {
       background-color: transparent;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-left: 15px solid black;
+      border: none;
+      span {
+        font-size: 40px;
+      }
     }
   }
 
   .titulo {
     width: 100%;
   }
+  .container-nombre {
+    padding: 5px;
+
+    .nombre {
+      margin: 0;
+    }
+  }
+  header.img-container {
+    z-index: -1;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    border-bottom-style: groove;
+    background-color: black;
+    border-bottom-width: 6px;
+    border-color: black;
+    .port-img {
+      width: 100%;
+      position: relative;
+      height: auto;
+      border-color: $primary_color;
+      border-bottom-style: groove;
+      border-width: 6px;
+      right: 70px;
+    }
+  }
 
   .sobre-mi {
+    padding: 0 auto;
     width: 100vw;
     flex-direction: column;
+    justify-items: center;
+
     H3 {
-        font-size: 100%;
-        text-align: center;
+      font-size: 100%;
     }
     p {
-        overflow: hidden;
-        font-size: small;
-        margin: 0;
+      overflow: hidden;
+      font-size: small;
+      margin: 0;
     }
 
     .column {
-      width: 90%;
-      border-style:groove;
+      width: 80%;
+      border-style: groove;
       height: 90px;
       border-bottom: $primary_color;
       transition: height 1s ease-in-out;
@@ -505,47 +560,51 @@ footer {
       font-size: 10px;
     }
     .btn-mas {
-        font-family: 'Montserrat','Courier';
-        width: 70px;
-        height: 40px;
-        display: flex;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        bottom: 40px;
-        background-color: $text_color;
-        color: $primary_color;
-        font-family: 'Courier New', Courier, monospace;
-        border-radius: 25%;
+      font-family: "Montserrat", "Courier";
+      width: 70px;
+      height: 40px;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      bottom: 40px;
+      background-color: $text_color;
+      color: $primary_color;
+      font-family: "Courier New", Courier, monospace;
+      border-radius: 25%;
     }
   }
 
-  header .img-hernan-container {
-    margin-top: 25vh;
-    background-color: rgb(192, 191, 255);
-    .img-hernan {
-      width: 60vw;
-      right: 30px;
+  header .supercontainer-hernan {
+    margin-top: 185px;
+    margin-bottom: 50px;
+    padding: 0;
+
+    .img-hernan-container {
+      padding: 0;
+      margin: 0;
+      background-color: rgb(192, 191, 255);
+      .img-hernan {
+        width: 60vw;
+        right: 30px;
+      }
     }
   }
 
   .educacion {
-    padding-left: 0;
-    margin: 5%;
     H3 {
-        font-size: 100%;
+      font-size: 100%;
     }
     H4 {
-        font-size: 70%;
-        margin: 0;
-        margin-bottom: 20px;
+      font-size: 70%;
+      margin: 0;
+      margin-bottom: 20px;
     }
     p {
-        font-size: 70%;
+      font-size: 70%;
     }
     img {
       width: 30vw;
-
     }
   }
 

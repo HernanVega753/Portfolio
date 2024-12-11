@@ -1,15 +1,13 @@
-
 // Variables
 $primary_color: #0a042d;
 $secondary_color: #6400f9;
 $accent_color: #f75f35;
 $text_color: #e0e0e0eb;
 $text_color_2: #00f746;
-$background_color: #4A4A4A;
+$background_color: #4a4a4a;
 $tertiary_color: #e0e0e0;
 $fill_color: #f75f35;
 $circle_size: 100px;
-
 
 * {
   margin: 0;
@@ -18,11 +16,12 @@ $circle_size: 100px;
 }
 
 // Global styles
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  font-family: 'Open Sans', 'Montserrat', 'sans-serif';
+  font-family: "Open Sans", "Montserrat", "sans-serif";
   color: $text_color;
   overflow-x: hidden;
 }
@@ -34,7 +33,7 @@ body, html {
   left: 0;
   width: 100%;
   height: 300%;
-  background: linear-gradient(270deg, hsl(241, 100%, 30%), #16166daa);
+  background: linear-gradient(270deg, hsl(241, 83%, 77%), #e8e2ff);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
 }
@@ -73,14 +72,13 @@ h2 {
   padding-top: 50px;
 }
 
-
 // Header styles
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  
+
   .supercontainer-hernan {
     width: 100%;
     justify-items: center;
@@ -110,11 +108,11 @@ header {
     height: auto;
     overflow: hidden;
     position: absolute;
-    background-color: rgb(168, 216, 232);;
+    background-color: rgb(168, 216, 232);
     border-bottom-style: groove;
     border-bottom-width: 6px;
     border-color: black;
-  
+
     .port-img {
       justify-self: center;
       position: relative;
@@ -159,7 +157,7 @@ header {
 }
 .container-nombre {
   width: 100%;
-  
+
   .nombre {
     margin: 0;
   }
@@ -191,13 +189,13 @@ header {
   display: flex;
   width: 100%;
   height: auto;
-  color: #4A4A4A;
+  color: #4a4a4a;
   overflow: hidden;
   align-items: center;
   justify-content: center;
 
   .column {
-    border-style:groove;
+    border-style: groove;
     border-width: 5px;
     border-bottom-right-radius: 15%;
     border-top-left-radius: 15%;
@@ -225,7 +223,6 @@ header {
 }
 
 .container-proyectos {
-  
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -234,7 +231,7 @@ header {
   justify-self: center;
   justify-content: center;
   overflow-y: visible;
- 
+
   .proyectos {
     padding: 25px;
     margin: 25px;
@@ -252,7 +249,7 @@ header {
   }
 
   p {
-    display: NONE;;
+    display: NONE;
     font-size: 20px;
     margin: 25px;
     text-align: justify;
@@ -270,7 +267,7 @@ header {
   .github-proyectos {
     width: 70px;
     height: 70px;
-    margin: 0
+    margin: 0;
   }
   .github-proyectos:hover {
     transform: scale(1.3);
@@ -297,11 +294,9 @@ header {
       span {
         font-size: 40px;
       }
-      
     }
   }
 }
-
 
 .educacion {
   width: 50000px;
@@ -317,7 +312,6 @@ header {
   border-bottom-left-radius: 50%;
   padding: 20px;
   img {
-
     margin: 25px;
     width: 15vw;
     height: auto;
@@ -327,7 +321,6 @@ header {
     padding: 30px;
   }
 }
-
 
 .subtitulo {
   text-align: right;
@@ -363,7 +356,7 @@ footer {
   border-style: dashed;
   position: relative;
   top: 48px;
-  width:fit-content;
+  width: fit-content;
   align-self: center;
   justify-self: center;
 
@@ -392,7 +385,6 @@ footer {
 @media (max-width: 1020px) {
   * {
     box-sizing: border-box;
-
   }
 
   body {
@@ -437,10 +429,9 @@ footer {
     height: 100%;
     justify-content: center;
     H3 {
-        font-size: 18px;
-        margin: 5px;
-        text-align: center;
-
+      font-size: 18px;
+      margin: 5px;
+      text-align: center;
     }
     p {
       display: none;
@@ -452,14 +443,11 @@ footer {
       padding: 3%;
     }
     .proyectos {
-      
       display: none;
       width: fit-content;
       height: fit-content;
-
     }
     img {
-
       border-top-left-radius: 25%;
     }
     .github-proyectos {
@@ -481,7 +469,7 @@ footer {
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content:center;
+      justify-content: center;
       align-items: center;
       border-radius: 50%;
       border: none;
@@ -498,8 +486,6 @@ footer {
       width: 0;
       height: 0;
       border-style: inset;
-      
-      
     }
     .flechaIzquierda {
       display: none;
@@ -515,7 +501,6 @@ footer {
         font-size: 40px;
       }
     }
-
   }
 
   .titulo {
@@ -523,7 +508,7 @@ footer {
   }
   .container-nombre {
     padding: 5px;
-    
+
     .nombre {
       margin: 0;
     }
@@ -554,19 +539,19 @@ footer {
     width: 100vw;
     flex-direction: column;
     justify-items: center;
-    
+
     H3 {
-        font-size: 100%;
+      font-size: 100%;
     }
     p {
-        overflow: hidden;
-        font-size: small;
-        margin: 0;
+      overflow: hidden;
+      font-size: small;
+      margin: 0;
     }
 
     .column {
       width: 80%;
-      border-style:groove;
+      border-style: groove;
       height: 90px;
       border-bottom: $primary_color;
       transition: height 1s ease-in-out;
@@ -575,18 +560,18 @@ footer {
       font-size: 10px;
     }
     .btn-mas {
-        font-family: 'Montserrat','Courier';
-        width: 70px;
-        height: 40px;
-        display: flex;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        bottom: 40px;
-        background-color: $text_color;
-        color: $primary_color;
-        font-family: 'Courier New', Courier, monospace;
-        border-radius: 25%;
+      font-family: "Montserrat", "Courier";
+      width: 70px;
+      height: 40px;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      bottom: 40px;
+      background-color: $text_color;
+      color: $primary_color;
+      font-family: "Courier New", Courier, monospace;
+      border-radius: 25%;
     }
   }
 
@@ -594,8 +579,8 @@ footer {
     margin-top: 185px;
     margin-bottom: 50px;
     padding: 0;
-    
-      .img-hernan-container {
+
+    .img-hernan-container {
       padding: 0;
       margin: 0;
       background-color: rgb(192, 191, 255);
@@ -607,21 +592,19 @@ footer {
   }
 
   .educacion {
-
     H3 {
-        font-size: 100%;
+      font-size: 100%;
     }
     H4 {
-        font-size: 70%;
-        margin: 0;
-        margin-bottom: 20px;
+      font-size: 70%;
+      margin: 0;
+      margin-bottom: 20px;
     }
     p {
-        font-size: 70%;
+      font-size: 70%;
     }
     img {
       width: 30vw;
-
     }
   }
 

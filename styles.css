@@ -13,6 +13,21 @@ html {
   color: rgba(224, 224, 224, 0.9215686275);
   overflow-x: hidden;
 }
+.overlay {
+  position: fixed;
+  right: 1%;
+  top: 85%;
+  z-index: 100;
+  background-color: rgba(224, 224, 224, 0.9215686275);
+  border-radius: 50%;
+  border-style: inset;
+  border-width: 7px;
+  border-color: #000;
+  color: black;
+  font-family: "Open Sans", "Montserrat", "sans-serif";
+  font-style: italic;
+  font-weight: bolder;
+}
 
 .background {
   z-index: -5;

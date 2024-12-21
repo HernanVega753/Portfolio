@@ -16,6 +16,15 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="overlay.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("X1nESwc_gQVaPHapt");
+    </script>
   </head>
   <div class="background"></div>
   <body>
@@ -60,6 +69,48 @@
         /></a>
       </div>
     </header>
+
+    <button class="overlay" id="openOverlay">Contáctame!</button>
+
+    <div id="overlay" class="hidden">
+      <div class="overlay-content">
+        <button id="closeOverlay">X</button>
+
+        <section id="contact">
+          <form id="form">
+            <div class="field">
+              <label class="label" for="from_name">Nombre</label>
+              <input type="text" name="from_name" id="from_name" />
+            </div>
+
+            <div class="field">
+              <label class="label" for="message">Mensaje</label>
+              <input
+                class="messageField"
+                type="text"
+                name="message"
+                id="message"
+              />
+            </div>
+            <div class="field">
+              <label class="label" for="email_id">Email</label>
+              <input type="text" name="email_id" id="email_id" />
+            </div>
+
+            <input
+              class="contactameButton"
+              type="submit"
+              id="button"
+              value="Contáctame"
+            />
+          </form>
+          <p id="statusMessage"></p>
+        </section>
+
+        <p></p>
+      </div>
+    </div>
+
     <div class="titulo">
       <h2>Sobre mí</h2>
     </div>
@@ -106,7 +157,7 @@
           <a href="https://github.com/TheByteBusters/SuchGreatFood">
             <img
               class="github-proyectos"
-              src="./img/tecnologias/suchgoodfood.png"
+              src="./img/tecnologias/githubProyectos.png"
               alt="GitHub Such Great Food"
             />
           </a>
@@ -328,6 +379,9 @@
     </div>
 
     <script src="./scripts.js"></script>
+    <script src="sendEmail.js"></script>
+    <script src="overlay.js"></script>
+
     <footer>
       Portafolio de Hernán Pablo Vega | Creado con HTML - CSS y JavaScript |
       2024®️

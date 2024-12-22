@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="overlay.css" />
+    <link rel="stylesheet" href="animation.css" />
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -37,21 +38,27 @@
     <![endif]-->
 
     <header>
-      <div class="img-container">
+      <div class="img-container" id="imgContainer">
         <img
+          src="./img/portadaGitAmpliadaSinFondo.png"
+          id="portImg"
           class="port-img"
-          src="./img/portadaGitAmpliada.jpg"
           alt="portada"
         />
       </div>
+
       <div class="supercontainer-hernan">
         <div class="img-hernan-container">
-          <img class="img-hernan" src="./img/cuadrado.png" alt="Hernan Vega" />
+          <img
+            id="imgHernan"
+            class="img-hernan"
+            src="./img/cuadrado.png"
+            alt="Hernan Vega"
+          />
         </div>
-      </div>
-
-      <div class="container-nombre">
-        <h1 class="nombre">HERNÁN PABLO VEGA</h1>
+        <div class="container-nombre">
+          <h1 class="nombre"></h1>
+        </div>
       </div>
 
       <h2 class="fullstack" id="programadorFullstack">Desarrollador Backend</h2>
@@ -382,6 +389,8 @@
     <script src="./scripts.js"></script>
     <script src="sendEmail.js"></script>
     <script src="overlay.js"></script>
+    <script src="darkMode.js"></script>
+    <script src="animation.js"></script>
 
     <footer>
       Portafolio de Hernán Pablo Vega | Creado con HTML - CSS y JavaScript |

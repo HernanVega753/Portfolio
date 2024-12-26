@@ -38,33 +38,14 @@
     <![endif]-->
 
     <header>
-      <div class="img-container" id="imgContainer">
-        <img
-          src="./img/portadaGitAmpliadaSinFondo.png"
-          id="portImg"
-          class="port-img"
-          alt="portada"
-        />
+      <div class="short-cut">
+        <button id="openSkills">🤖 - Tecnologías</button>
+        <button id="openProjects">👨‍💻 - Proyectos</button>
+        <button id="openEducation">📖 - Estudios</button>
+        <button id="backHome">🏠 - Home</button>
       </div>
-
-      <div class="supercontainer-hernan">
-        <div class="img-hernan-container">
-          <img
-            id="imgHernan"
-            class="img-hernan"
-            src="./img/cuadrado.png"
-            alt="Hernan Vega"
-          />
-        </div>
-        <div class="container-nombre">
-          <h1 class="nombre"></h1>
-        </div>
-      </div>
-
-      <h2 class="fullstack" id="programadorFullstack">Desarrollador Backend</h2>
-
       <div class="contacto" id="contacto">
-        <a class="email" href="https://hervega123@gmail.com"
+        <a class="email" href="mailto:hervega123@gmail.com"
           ><img src="./img/tecnologias/mail.png" alt="email"
         /></a>
 
@@ -76,9 +57,43 @@
           ><img src="./img/tecnologias/github.png" alt="GitHub/HernanVega753"
         /></a>
       </div>
+      <div id="homePage" class="home-page">
+    
+      <div class="border-hernan">
+        <div class="supercontainer-hernan">
+          <div class="img-hernan-container">
+            <img
+              id="imgHernan"
+              class="img-hernan"
+              src="./img/cuadrado.png"
+              alt="Hernan Vega"
+            />
+          </div>
+          <div class="container-nombre">
+            <h1 class="nombre">                <br></h1>
+            <h2 class="fullstack" id="programadorFullstack">
+              Desarrollador Backend
+            </h2>
+        </div>
+      </div>
+  
+
+  
+
+  <div class="quien-soy">
+    <p>
+      <strong>AUTODIDACTA Y TÉCNICO UNIVERSITARIO EN PROGRAMACIÓN (UTN - Mendoza - Argentina)</strong> 
+      <br />
+      <i>En camino de perfeccionamiento en BACKEND.</i>
+    </p>
+  </div>
+</div>
+</div>
+        
+      
     </header>
 
-    <button class="overlay" id="openOverlay">Contáctame!</button>
+    <button class="overlay" id="openOverlay">Mensaje Rápido</button>
 
     <div id="overlay" class="hidden">
       <div class="overlay-content">
@@ -104,6 +119,7 @@
               <label class="label" for="email_id">Email</label>
               <input type="text" name="email_id" id="email_id" />
             </div>
+            
 
             <input
               class="contactameButton"
@@ -119,39 +135,18 @@
       </div>
     </div>
 
-    <div class="titulo">
-      <h2>Sobre mí</h2>
+    
     </div>
 
-    <div class="sobre-mi" id="sobreMi">
-      <div class="column" id="columnSobreMi">
-        <h3>Como programador</h3>
-        <p>
-          Soy Técnico Universitario en programación. Si bien tengo formación
-          FULLSTACK, es el BACKEND el que realmente me apasiona. Soy egresado de
-          la Universidad Tecnológica Nacional de San Rafael, Provincia de
-          Mendoza, Argentina. Allí desarrollé muy sólidas bases en lógica de
-          programación y metodologías ágiles de trabajo en equipo. Además de
-          dominar diferentes lenguajes también aprendí a implementar tecnologías
-          fundamentales para el desarrollo como control de versiones, principios
-          de diseño de software, frameworks, entornos virtuales, contenedores y
-          testing.
-          <br />
-          Estas sólidas bases han facilitado mi recorrido autodidacta tomando
-          contacto con aún más tecnologías como Godot Engine para videojuegos,
-          PHP, desarrollo de aplicaciones low code y proyectos personales
-          variados. <br />
-          en la programación encontré maravillosas herramientas para poder hacer
-          volar mi imaginación y crear todo lo que pueda nacer de mi mente.
-        </p>
+    
+    </div>
+
+    
+    <div id="projects-container" class="hidden">
+      <div class="titulo">
+        <h2>Proyectos</h2>
       </div>
-      <button class="btn-mas" id="btnMas">más</button>
-    </div>
-    <div class="titulo">
-      <h2>Proyectos</h2>
-    </div>
-
-    <div>
+      
       <div class="container-proyectos">
         <div class="buttons-arrows">
           <button class="flechaIzquierda" id="flechaIzquierda">
@@ -338,10 +333,12 @@
     </div>
     <div class="full-divider"></div>
 
+    
+  <div id="education-container" class="hidden">
+    
     <div class="titulo">
       <h2>Educación</h2>
     </div>
-
     <div class="educacion">
       <h3>Universidad Tecnológica Nacional</h3>
       <h4>San Rafael, Mendoza - Argentina</h4>
@@ -350,50 +347,60 @@
       /></a>
       <p>Tecnicatura Universitaria en Programación</p>
     </div>
+  </div>
+    
     <div class="full-divider"></div>
 
+  <div id="skillsContainer" class="hidden">
     <div class="titulo">
       <h2>Skills</h2>
     </div>
+    <div class="tec-container">
+        <div class="tecnologias" id="tecnologias">
+        <img src="./img/tecnologias/html.svg" alt="html" />
+        <img src="./img/tecnologias/css.svg" alt="css" />
+        <img src="./img/tecnologias/js.svg" alt="JavaScript" />
+        <img src="./img/tecnologias/java.svg" alt="java" />
+        <img src="./img/tecnologias/python.svg" alt="python" />
+      </div>
+      <div class="subtitulo">
+        <h3>Lenguajes</h3>
+      </div>
 
-    <div class="tecnologias" id="tecnologias">
-      <img src="./img/tecnologias/html.svg" alt="html" />
-      <img src="./img/tecnologias/css.svg" alt="css" />
-      <img src="./img/tecnologias/js.svg" alt="JavaScript" />
-      <img src="./img/tecnologias/java.svg" alt="java" />
-      <img src="./img/tecnologias/python.svg" alt="python" />
-    </div>
-    <div class="subtitulo">
-      <h3>Lenguajes</h3>
+      <div class="tecnologias" id="tecnologias">
+        <img src="./img/tecnologias/mysql.svg" alt="mysql" />
+        <img src="./img/tecnologias/postgresql.svg" alt="postgresql" />
+        <img src="./img/tecnologias/mongodb.svg" alt="mongodb" />
+      </div>
+      <div class="subtitulo">
+        <h3>Bases de datos</h3>
+      </div>
+
+      <div class="tecnologias" id="tecnologias">
+        <img src="./img/tecnologias/git.svg" alt="git" />
+        <img src="./img/tecnologias/postman.svg" alt="postman" />
+        <img src="./img/tecnologias/docker.png" alt="docker" />
+        <img src="./img/tecnologias/trello.png" alt="trello" />
+      </div>
+      <div class="subtitulo">
+        <h3>Complementos</h3>
+      </div>
     </div>
 
-    <div class="tecnologias" id="tecnologias">
-      <img src="./img/tecnologias/mysql.svg" alt="mysql" />
-      <img src="./img/tecnologias/postgresql.svg" alt="postgresql" />
-      <img src="./img/tecnologias/mongodb.svg" alt="mongodb" />
-    </div>
-    <div class="subtitulo">
-      <h3>Bases de datos</h3>
-    </div>
-
-    <div class="tecnologias" id="tecnologias">
-      <img src="./img/tecnologias/git.svg" alt="git" />
-      <img src="./img/tecnologias/postman.svg" alt="postman" />
-      <img src="./img/tecnologias/docker.png" alt="docker" />
-      <img src="./img/tecnologias/trello.png" alt="trello" />
-    </div>
-    <div class="subtitulo">
-      <h3>Complementos</h3>
-    </div>
+    
 
     <script src="./scripts.js"></script>
     <script src="sendEmail.js"></script>
     <script src="overlay.js"></script>
-    <script src="darkMode.js"></script>
     <script src="animation.js"></script>
+    <script src="projects.js"></script>
+  </div>
+    
+
+
 
     <footer>
-      Portafolio de Hernán Pablo Vega | Creado con HTML - CSS y JavaScript |
+      Portafolio de Hernán Pablo Vega | Creado con HTML - CSS - JavaScript |
       2024®️
     </footer>
   </body>

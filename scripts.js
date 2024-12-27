@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactoLinks = document.querySelectorAll("#contacto a"); // Todos los elementos <a> dentro de contacto
   let delay = 0;
 
-  delay += 2600;
+  delay += 3000;
 
   // Animación para los enlaces de contacto
   // Retardo adicional antes de los enlaces
@@ -19,16 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, delay);
 
     delay += 600; // Ajuste para el retardo entre enlaces
-  });
-  const button = document.getElementById("btnMas");
-  const contenedor = document.getElementById("columnSobreMi");
-
-  button.addEventListener("click", () => {
-    if (contenedor.style.height === "90px" || contenedor.style.height === "") {
-      contenedor.style.height = "380px"; // Expande a 380px
-    } else {
-      contenedor.style.height = "90px"; // Colapsa a 90px
-    }
   });
 
   const buttonProyectosIzquierda = document.getElementById("flechaIzquierda");

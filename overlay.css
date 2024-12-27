@@ -4,7 +4,9 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-
+.projects {
+  position: fixed;
+}
 #overlay {
   position: fixed;
   top: 0;
@@ -15,7 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 5000;
   transition: opacity 0.3s ease;
 }
 

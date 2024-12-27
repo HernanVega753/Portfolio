@@ -6,18 +6,23 @@
 
 body,
 html {
+  height: 100%;
   margin: 0;
   padding: 0;
   min-height: 100%;
   font-family: "Open Sans", "Montserrat", "sans-serif";
   color: rgba(224, 224, 224, 0.9215686275);
   overflow-x: hidden;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
+
 .overlay {
   position: fixed;
   left: 0%;
-  top: 20px;
-  z-index: 100;
+  top: 0px;
+  z-index: 3000;
   background-color: rgba(224, 224, 224, 0.9215686275);
   border-radius: 7%;
   border-style: outset;
@@ -75,21 +80,71 @@ h2 {
   text-align: center;
   padding-top: 50px;
 }
-
 header {
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+.border-hernan {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  height: 80%;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: #dcdcdc;
+  border-style: dashed;
+  border-radius: 1%;
 }
-header .supercontainer-hernan {
+
+.supercontainer-hernan {
+  padding: 25px;
   width: 100%;
-  padding-top: 230px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-content: center;
 }
-header .supercontainer-hernan .img-hernan-container {
+.short-cut {
+  position: fixed;
+  z-index: 3000;
+  bottom: 0px;
+  right: -240px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: center;
+  align-self: flex-end;
+}
+.short-cut button {
+  width: 300px;
+  padding-right: 100px;
+  text-align: left;
+
+  margin: 10px;
+  font-size: 20px;
+  font-family: monserrat;
+  font-weight: bold;
+  background-color: rgb(168, 216, 232);
+  border-style: groove;
+  border-width: 4px;
+  border-color: black;
+  border-top-left-radius: 25%;
+  transition: transform 0.3s ease-in-out; /* Duración y tipo de transición */
+}
+
+.short-cut button:hover {
+  transform: translateX(-130px); /* Mueve el botón 100px a la izquierda */
+}
+
+.supercontainer-hernan .img-hernan-container {
   overflow: hidden;
   min-width: 200px;
   max-width: 200px;
@@ -101,56 +156,75 @@ header .supercontainer-hernan .img-hernan-container {
   border-top-right-radius: 5%;
   border-bottom-left-radius: 5%;
   border-color: #0a042d;
+  margin-top: 25px;
+  margin-right: 30px;
   display: flex;
-  justify-content: center;
-  margin: 25px;
+  margin-bottom: 0;
   background-color: rgb(192, 191, 255);
-  margin-bottom: 20vh;
 }
-header .img-container {
+.container-nombre {
+  align-self: end;
+}
+.quien-soy {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  border: #000;
+  background-color: slateblue;
+  padding: 10px;
+  margin: 20px;
+  font-size: 17px;
+}
+
+header {
+  overflow: hidden;
+}
+.img-container {
   width: 100%;
   z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: auto;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   background-color: rgb(168, 216, 232);
   border-bottom-style: groove;
   border-bottom-width: 6px;
   border-color: black;
 }
-header .img-container .port-img {
+.img-container .port-img {
   justify-self: center;
   position: relative;
-  height: 30%;
+  height: 100px;
   border-color: #0a042d;
   border-bottom-style: groove;
   border-width: 6px;
 }
-header .contacto {
-  z-index: 2;
+.contacto {
   width: 100%;
-  margin: 20px;
+  height: 50px;
+  top: 20px;
   position: fixed;
   display: flex;
   justify-content: right;
+  z-index: 3000;
 }
-header .contacto a {
-  padding: 1vw;
+.contacto a {
+  height: 30px;
+  padding-right: 25px;
   font-size: 150%;
   font-weight: bold;
   color: #0a042d;
   text-shadow: 2px 2px 4px #e0e0e0;
 }
-header .contacto img {
+.contacto img {
   width: 50px;
   height: 50px;
   background-color: #e0e0e0;
   border-radius: 15%;
-  padding: 2px;
   border-color: black;
   border-style: outset;
   border-width: 5px;
@@ -161,13 +235,8 @@ header .contacto img {
 }
 
 .container-nombre {
-  width: auto;
-}
-.container-nombre .nombre {
-  margin: 0;
-  display: flex;
-  align-items: center; /* Centra verticalmente */
-  height: 250px;
+  height: 184px;
+  align-content: center;
 }
 
 .titulo {
@@ -210,8 +279,6 @@ header .contacto img {
   color: rgba(224, 224, 224, 0.9215686275);
   width: 60%;
   height: 380px;
-  margin: 10px;
-  padding: 30px;
   display: flex;
   flex-direction: column;
   text-align: justify;
@@ -223,15 +290,32 @@ header .contacto img {
   display: none;
 }
 .sobre-mi H3 {
-  text-align: center;
-  margin-bottom: 20px;
+  padding: 0;
+  margin: 0;
+}
+#projects-container {
+  position: fixed;
+  top: -75px;
+}
+#education-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -75px;
+}
+#skillsContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -75px;
 }
 
 .container-proyectos {
-  width: 80%;
+  top: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
-  height: auto;
   align-items: center;
   justify-self: center;
   justify-content: center;
@@ -239,13 +323,13 @@ header .contacto img {
 }
 .container-proyectos .proyectos {
   padding: 25px;
-  margin: 25px;
+  margin: 25px, 25px;
   align-items: center;
   justify-items: center;
   display: none;
   position: relative;
-  width: 600px;
-  height: 500px;
+  width: 40%;
+  height: auto;
   border-color: #e0e0e0;
   border-style: inset;
   border-bottom-right-radius: 15%;
@@ -256,10 +340,10 @@ header .contacto img {
   display: NONE;
   font-size: 20px;
   margin: 25px;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
   hyphens: auto;
-  width: 400px;
+  width: 40%;
   border-style: dotted;
   padding: 25px;
   background-color: darkblue;
@@ -288,13 +372,21 @@ header .contacto img {
   width: 10%;
   height: auto;
 }
+.container-proyectos .buttons-arrows button {
+  position: fixed;
+  z-index: 1;
+}
 .container-proyectos .buttons-arrows .flechaDerecha {
+  position: fixed;
+  right: 80px;
   background-color: transparent;
 }
 .container-proyectos .buttons-arrows .flechaDerecha span {
   font-size: 40px;
 }
 .container-proyectos .buttons-arrows .flechaIzquierda {
+  position: fixed;
+  left: 50px;
   background-color: transparent;
 }
 .container-proyectos .buttons-arrows .flechaIzquierda span {
@@ -341,6 +433,10 @@ header .contacto img {
 }
 
 footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  height: fit-content;
   color: white;
   text-align: right;
   padding-top: 10px;
@@ -356,16 +452,20 @@ footer {
   justify-content: center;
   border-style: dashed;
   position: relative;
-  top: 48px;
+  top: 5px;
   width: fit-content;
   align-self: center;
   justify-self: center;
 }
+.subtitulo {
+  position: relative;
+  top: -42px;
+}
 .tecnologias img {
-  width: 7vw;
+  width: 5vw;
   padding: 10px;
   background-color: #e0e0e0;
-  margin: 2vw;
+  margin: 1vw;
   border-radius: 10%;
 }
 .tecnologias img:hover {
@@ -378,7 +478,7 @@ footer {
   text-transform: uppercase;
   color: #ffffff;
   background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-align: center;
   position: relative;
   opacity: 0; /* Comienza invisible */
@@ -394,243 +494,6 @@ footer {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@media (max-width: 1020px) {
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    overflow-x: hidden;
-  }
-  body h1 {
-    font-size: 30px;
-  }
-  body h2 {
-    font-size: 20px;
-  }
-  body .fullstack {
-    margin-bottom: 8vh;
-  }
-  .tecnologias {
-    border-bottom: whitesmoke;
-    border-style: dashed;
-    padding: auto;
-    position: relative;
-    top: 25px;
-  }
-  .tecnologias img {
-    padding: 0.5vw;
-    margin: 5px;
-    width: 7vw;
-  }
-  .subtitulo {
-    margin-top: 30px;
-    font-size: 12px;
-  }
-  .container-proyectos {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    height: 100%;
-    justify-content: center;
-  }
-  .container-proyectos H3 {
-    font-size: 18px;
-    margin: 5px;
-    text-align: center;
-  }
-  .container-proyectos p {
-    display: none;
-    margin-top: 0;
-    font-size: 16px;
-    text-align: justify;
-    width: fit-content;
-    border-style: dotted;
-    padding: 3%;
-  }
-  .container-proyectos .proyectos {
-    display: none;
-    width: fit-content;
-    height: fit-content;
-  }
-  .container-proyectos img {
-    border-top-left-radius: 25%;
-  }
-  .container-proyectos .github-proyectos {
-    width: 60px;
-    height: 60px;
-  }
-  .container-proyectos .proyecto-makeof {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .container-proyectos .proyecto-makeof img {
-    width: 20%;
-    height: auto;
-  }
-  .container-proyectos .buttons-arrows {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: none;
-    top: -20px;
-  }
-  .container-proyectos button {
-    margin-top: 0;
-    justify-content: center;
-    width: 4vw;
-    position: relative;
-    transition: 0.3s ease-in-out;
-    display: flex;
-    flex-direction: row;
-    width: 0;
-    height: 0;
-    border-style: inset;
-  }
-  .container-proyectos .flechaIzquierda {
-    display: none;
-    background-color: transparent;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 15px solid black;
-  }
-  .container-proyectos .flechaDerecha {
-    background-color: transparent;
-    border: none;
-  }
-  .container-proyectos .flechaDerecha span {
-    font-size: 40px;
-  }
-  .titulo {
-    width: 100%;
-  }
-  .container-nombre {
-    height: auto;
-    padding: 5px;
-  }
-  .container-nombre .nombre {
-    margin: 0;
-  }
-  header.img-container {
-    z-index: -1;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    position: absolute;
-    border-bottom-style: groove;
-    background-color: black;
-    border-bottom-width: 6px;
-    border-color: black;
-  }
-  header.img-container .port-img {
-    width: 100%;
-    position: relative;
-    height: auto;
-    border-color: #0a042d;
-    border-bottom-style: groove;
-    border-width: 6px;
-    right: 70px;
-  }
-  .sobre-mi {
-    padding: 0 auto;
-    width: 100vw;
-    flex-direction: column;
-    justify-items: center;
-  }
-  .sobre-mi H3 {
-    font-size: 100%;
-  }
-  .sobre-mi p {
-    overflow: hidden;
-    font-size: small;
-    margin: 0;
-  }
-  .sobre-mi .column {
-    width: 80%;
-    border-style: groove;
-    height: 90px;
-    border-bottom: #0a042d;
-    transition: height 1s ease-in-out;
-  }
-  .sobre-mi p {
-    font-size: 10px;
-  }
-  .sobre-mi .btn-mas {
-    font-family: "Montserrat", "Courier";
-    width: 70px;
-    height: 40px;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    bottom: 40px;
-    background-color: rgba(224, 224, 224, 0.9215686275);
-    color: #0a042d;
-    font-family: "Courier New", Courier, monospace;
-    border-radius: 25%;
-  }
-  header .supercontainer-hernan {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 205px;
-    padding: 0;
-  }
-  header .supercontainer-hernan .img-hernan-container {
-    margin-top: 30px;
-    margin-bottom: 0;
-    background-color: rgb(192, 191, 255);
-  }
-  header .supercontainer-hernan .img-hernan-container .img-hernan {
-    width: 60vw;
-    right: 30px;
-  }
-  .educacion H3 {
-    font-size: 100%;
-  }
-  .educacion H4 {
-    font-size: 70%;
-    margin: 0;
-    margin-bottom: 20px;
-  }
-  .educacion p {
-    font-size: 70%;
-  }
-  .educacion img {
-    width: 30vw;
-  }
-  footer {
-    font-size: 5px;
-    margin-top: 30px;
-  }
-  .full-divider {
-    width: 100%;
-    margin: 10vh;
-  }
-  .overlay {
-    position: fixed;
-    width: fit-content;
-    right: 50%;
-    top: 4px;
-    z-index: 1000;
-    background-color: rgba(224, 224, 224, 0.9215686275);
-    border-radius: 10%;
-    border-style: outset;
-    border-width: 5px;
-    border-color: #000;
-    color: black;
-    font-family: "Open Sans", "Montserrat", "sans-serif";
-    font-style: italic;
-    font-weight: bolder;
   }
 }
 
@@ -665,7 +528,7 @@ body.dark-mode .container-proyectos p {
   background-color: #333;
 }
 
-body.dark-mode header .contacto a {
+body.dark-mode .contacto a {
   color: #ffffff;
   text-shadow: 2px 2px 4px #333;
 }
@@ -677,4 +540,244 @@ body.dark-mode .educacion {
 
 body.dark-mode footer {
   color: #b3b3b3;
+}
+@media (max-width: 600px) {
+  /* Primer media query, para dispositivos pequeños */
+  /* PAGINA PRINCIPAL */
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  #projects-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 1%;
+  }
+  #education-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 1%;
+  }
+  #skillsContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 1%;
+  }
+  header {
+    width: 100%;
+    height: 100%;
+  }
+  .short-cut {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    top: 0;
+    z-index: 3000;
+  }
+
+  .short-cut button {
+    width: 75px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    justify-self: center;
+    align-self: flex-end;
+    margin: 2px;
+    margin-bottom: 10%;
+    font-size: 8px;
+    border-width: 1px;
+    text-align: center;
+    border-radius: 10%;
+    color: whitesmoke;
+    background-color: #0a042d;
+    background-blend-mode: color;
+    transition: transform 0.3s ease-in-out; /* Duración y tipo de transición */
+  }
+
+  .short-cut button:hover {
+    transform: translateX(-1130px); /* Mueve el botón 100px a la izquierda */
+  }
+
+  .border-hernan {
+    width: 95%;
+    height: fit-content;
+    justify-items: center;
+    align-items: center;
+  }
+  .supercontainer-hernan {
+    display: flex;
+    flex-direction: column;
+  }
+  .supercontainer-hernan .img-hernan-container {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+  }
+  .supercontainer-hernan img {
+    align-items: center;
+  }
+  .supercontainer-hernan h1 {
+    width: fit-content;
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+  }
+  .supercontainer-hernan .fullstack {
+    text-align: center;
+    font-size: 10px;
+  }
+  .container-nombre {
+    align-self: center;
+  }
+  .quien-soy {
+    margin: 0;
+    font-size: 10px;
+    margin-bottom: 15px;
+  }
+  footer {
+    font-size: 6px;
+  }
+  .contacto .linkedin {
+    margin-right: 10px;
+    padding: 0;
+  }
+  .contacto .email {
+    margin-right: 10px;
+    padding: 0;
+  }
+  .contacto img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+  .overlay {
+    height: 40px;
+    font-size: 10px;
+    text-align: center;
+  }
+  /* PAGINA DE TECNOLOGIAS | SKILLS */
+
+  .projects-container {
+    width: 100%;
+  }
+  .titulo {
+    font-size: 8px;
+    width: 50%;
+    background-color: #0a042d;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+  }
+  .tecnologias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-style: dashed;
+    position: relative;
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+  }
+  .tecnologias img {
+    width: 50px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    margin: 1vw;
+    border-radius: 10%;
+  }
+  .tecnologias img:hover {
+    background-color: white;
+  }
+  /* SECCIÓN PROYECTOS | PROJECTS */
+  .container-proyectos {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: visible;
+  }
+  .container-proyectos .proyectos {
+    display: none;
+    position: fixed;
+    top: 14%;
+    width: 95%;
+    height: auto;
+    border-color: #e0e0e0;
+    border-style: inset;
+    border-bottom-right-radius: 15%;
+    border-top-left-radius: 15%;
+    background-color: #0a042d;
+  }
+
+  .container-proyectos p {
+    display: NONE;
+    position: fixed;
+    bottom: 8%;
+    font-size: 12px;
+    text-align: left;
+    text-justify: inter-word;
+    hyphens: auto;
+    width: 95%;
+    border-style: dotted;
+    background-color: darkblue;
+  }
+  .container-proyectos img {
+    padding: 2px;
+    width: 100%;
+    background-color: #0a042d;
+    border-top-left-radius: 15%;
+  }
+  .container-proyectos .github-proyectos {
+    width: 70px;
+    height: 70px;
+    margin: 0;
+  }
+  .container-proyectos .github-proyectos:hover {
+    transform: scale(1.3);
+  }
+  .container-proyectos .proyecto-makeof {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .container-proyectos .proyecto-makeof img {
+    width: 10%;
+    height: auto;
+  }
+  .container-proyectos .buttons-arrows button {
+    position: fixed;
+    z-index: 3000;
+  }
+  .container-proyectos .buttons-arrows .flechaDerecha {
+    position: fixed;
+    background-color: transparent;
+    top: 20%;
+    right: 10%;
+  }
+  .container-proyectos .buttons-arrows .flechaDerecha span {
+    font-size: 40px;
+  }
+  .container-proyectos .buttons-arrows .flechaIzquierda {
+    position: fixed;
+    background-color: transparent;
+    left: 10%;
+    top: 20%;
+  }
+  .container-proyectos .buttons-arrows .flechaIzquierda span {
+    font-size: 40px;
+  }
 }
